@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Tx9CWgefSJ0=",
+  "success": true,
+  "projectFilePath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/AuthZero.AccountService.Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/mrsteve.bang/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
+    "/Users/mrsteve.bang/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/mrsteve.bang/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

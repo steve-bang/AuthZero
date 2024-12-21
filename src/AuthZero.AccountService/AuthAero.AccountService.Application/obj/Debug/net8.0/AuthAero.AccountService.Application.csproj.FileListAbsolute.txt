@@ -1,0 +1,17 @@
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/bin/Debug/net8.0/AuthAero.AccountService.Application.deps.json
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/bin/Debug/net8.0/AuthAero.AccountService.Application.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/bin/Debug/net8.0/AuthAero.AccountService.Application.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/bin/Debug/net8.0/AuthZero.AccountService.Domain.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/bin/Debug/net8.0/AuthZero.AccountService.Infrastructure.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/bin/Debug/net8.0/AuthZero.AccountService.Domain.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/bin/Debug/net8.0/AuthZero.AccountService.Infrastructure.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.AccountService.Application.csproj.AssemblyReference.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.AccountService.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.AccountService.Application.AssemblyInfoInputs.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.AccountService.Application.AssemblyInfo.cs
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.AccountService.Application.csproj.CoreCompileInputs.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.28EDB52B.Up2Date
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.AccountService.Application.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/refint/AuthAero.AccountService.Application.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.AccountService.Application.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/ref/AuthAero.AccountService.Application.dll
