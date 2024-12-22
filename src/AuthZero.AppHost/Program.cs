@@ -14,7 +14,9 @@ var sqlServerAccountService = builder.AddSqlServer("sql")
 var dbAccount = sqlServerAccountService.AddDatabase("Account");
 
 builder.AddProject<Projects.AuthZero_AccountService_WebApi>("AccountService-WebApi")
-        .WithReference(dbAccount); // Add a reference to the database
+        .WithReference(dbAccount)
+        .WaitFor(dbAccount);
+
 
 builder.AddProject<Projects.AuthZero_WebApp>("AuthZero-WebApp");
 

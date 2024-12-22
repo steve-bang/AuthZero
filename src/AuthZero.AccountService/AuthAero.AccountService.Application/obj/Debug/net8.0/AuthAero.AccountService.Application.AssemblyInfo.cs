@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthAero.AccountService.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23488d96326a35efaa6594bebc99324939df0dbb")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthAero.AccountService.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthAero.AccountService.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

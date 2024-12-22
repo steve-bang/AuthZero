@@ -71,3 +71,7 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net8.0/AuthZero.ServiceDefaults.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net8.0/AuthZero.WebApp.csproj.AssemblyReference.cache
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net8.0/AuthZero.1B286467.Up2Date
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net8.0/AuthZero.WebApp.sourcelink.json
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net8.0/AuthZero.WebApp.staticwebassets.endpoints.json
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net8.0/staticwebassets/msbuild.AuthZero.WebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

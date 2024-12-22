@@ -10,3 +10,4 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net8.0/refint/AuthZero.AccountService.Domain.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net8.0/AuthZero.AccountService.Domain.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net8.0/ref/AuthZero.AccountService.Domain.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net8.0/AuthZero.AccountService.Domain.sourcelink.json
