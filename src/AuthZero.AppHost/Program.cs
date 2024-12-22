@@ -11,7 +11,10 @@ var portDatabase = builder.AddParameter(
 
 // Define the SQL Server connection string
 var sqlServerAccountService = builder
-    .AddSqlServer("sql", port: int.Parse(portDatabase.Resource.Value))
+    .AddSqlServer(
+        "sql"
+        //, port: int.Parse(portDatabase.Resource.Value)
+    )
     .WithDataBindMount(source: "../../database");
 
 // Add a database to the SQL Server is AuthZero.Account

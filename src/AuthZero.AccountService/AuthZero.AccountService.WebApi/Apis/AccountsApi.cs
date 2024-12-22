@@ -1,6 +1,7 @@
 
 
 using AuthZero.AccountService.Application.Features.Commands;
+using AuthZero.AccountService.Application.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +17,9 @@ public static class AccountsApi
         // POST api/accounts/register
         api.MapPost("register", RegisterUserAsync);
 
+        // POST api/accounts/login
+        api.MapPost("login", LoginUserAsync);
+
         return api;
     }
 
@@ -26,5 +30,14 @@ public static class AccountsApi
         var idNewUser = await mediator.Send(command);
 
         return idNewUser;
+    }
+
+    public static async Task<ResultUserLoginSuccess> LoginUserAsync(
+        LoginUserCommand command, 
+        [FromServices] IMediator mediator)
+    {
+        var result = await mediator.Send(command);
+
+        return result;
     }
 }

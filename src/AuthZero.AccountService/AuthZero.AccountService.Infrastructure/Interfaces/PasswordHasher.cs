@@ -45,5 +45,14 @@ namespace AuthZero.AccountService.Infrastructure.Interfaces
             return HashPassword(password, saltBytes);
         }
 
+        public bool Verify(string password, string hash, string salt)
+        {
+            byte[] saltBytes = Convert.FromBase64String(salt);
+
+            string newHash = HashPassword(password, saltBytes);
+
+            return newHash == hash;
+        }
+
     }
 }

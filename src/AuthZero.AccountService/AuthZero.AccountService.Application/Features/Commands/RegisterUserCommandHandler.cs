@@ -1,9 +1,5 @@
 
 
-using AuthZero.AccountService.Domain.AggregatesModel.User;
-using AuthZero.AccountService.Domain.Interfaces;
-using AuthZero.AccountService.Domain.Repositories;
-
 namespace AuthZero.AccountService.Application.Features.Commands;
 
 /// <summary>
