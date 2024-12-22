@@ -1,5 +1,11 @@
 
+using AuthZero.AccountService.Application;
+using AuthZero.AccountService.Domain.Interfaces;
+using AuthZero.AccountService.Domain.Repositories;
 using AuthZero.AccountService.Infrastructure;
+using AuthZero.AccountService.Infrastructure.Interfaces;
+using AuthZero.AccountService.Infrastructure.Repositories;
+using AuthZero.Shared;
 
 namespace AuthZero.AccountService.WebApi.Extensions;
 
@@ -12,6 +18,15 @@ public static class Extensions
     {
         // Add the database context
         builder.AddDatabaseContext();
+
+        // Add the application services
+        builder.Services.AddApplication();
+
+        // Add the password hasher
+        builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+
+        // Add the repositories
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
     }
 
 

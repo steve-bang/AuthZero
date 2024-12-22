@@ -5,9 +5,14 @@ var passwordDatabase = builder.AddParameter(
     name: "password",
     secret: true);
 
+var portDatabase = builder.AddParameter(
+    name: "port",
+    secret: false);
+
 // Define the SQL Server connection string
-var sqlServerAccountService = builder.AddSqlServer("sql")
-    .WithDataBindMount(source: "/Users/mrsteve.bang/Documents/Database/SqlServer/AuthZero");
+var sqlServerAccountService = builder
+    .AddSqlServer("sql", port: int.Parse(portDatabase.Resource.Value))
+    .WithDataBindMount(source: "../../database");
 
 // Add a database to the SQL Server is AuthZero.Account
 // This is a name connection with "Account" and it's used by the AuthZero.AccountService project.

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zf8O7Kq1Sy0=",
+  "dgSpecHash": "1Udqos7ZQ84=",
   "success": true,
   "projectFilePath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/AuthZero.WebApp.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "/Users/mrsteve.bang/.nuget/packages/grpc.core.api/2.52.0/grpc.core.api.2.52.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/grpc.net.client/2.52.0/grpc.net.client.2.52.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/grpc.net.common/2.52.0/grpc.net.common.2.52.0.nupkg.sha512",
+    "/Users/mrsteve.bang/.nuget/packages/microsoft.aspnetcore.openapi/9.0.0/microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/microsoft.extensions.ambientmetadata.application/8.10.0/microsoft.extensions.ambientmetadata.application.8.10.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/microsoft.extensions.compliance.abstractions/8.10.0/microsoft.extensions.compliance.abstractions.8.10.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
@@ -38,6 +39,7 @@
     "/Users/mrsteve.bang/.nuget/packages/microsoft.extensions.telemetry/8.10.0/microsoft.extensions.telemetry.8.10.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/microsoft.extensions.telemetry.abstractions/8.10.0/microsoft.extensions.telemetry.abstractions.8.10.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/microsoft.io.recyclablememorystream/3.0.0/microsoft.io.recyclablememorystream.3.0.0.nupkg.sha512",
+    "/Users/mrsteve.bang/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/opentelemetry/1.9.0/opentelemetry.1.9.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/opentelemetry.api/1.9.0/opentelemetry.api.1.9.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/opentelemetry.api.providerbuilderextensions/1.9.0/opentelemetry.api.providerbuilderextensions.1.9.0.nupkg.sha512",
@@ -51,10 +53,7 @@
     "/Users/mrsteve.bang/.nuget/packages/polly.ratelimiting/8.4.2/polly.ratelimiting.8.4.2.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "/Users/mrsteve.bang/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
-    "/Users/mrsteve.bang/.nuget/packages/system.threading.ratelimiting/8.0.0/system.threading.ratelimiting.8.0.0.nupkg.sha512",
-    "/Users/mrsteve.bang/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
-    "/Users/mrsteve.bang/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
-    "/Users/mrsteve.bang/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.11/microsoft.netcore.app.host.osx-arm64.8.0.11.nupkg.sha512"
+    "/Users/mrsteve.bang/.nuget/packages/system.threading.ratelimiting/8.0.0/system.threading.ratelimiting.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

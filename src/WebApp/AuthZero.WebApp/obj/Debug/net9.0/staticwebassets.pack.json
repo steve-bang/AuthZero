@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/scopedcss/projectbundle/AuthZero.WebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets/AuthZero.WebApp.mmfwpl4ro2.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.AuthZero.WebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.AuthZero.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.AuthZero.WebApp.props",
+      "PackagePath": "build\\AuthZero.WebApp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.AuthZero.WebApp.props",
+      "PackagePath": "buildMultiTargeting\\AuthZero.WebApp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.AuthZero.WebApp.props",
+      "PackagePath": "buildTransitive\\AuthZero.WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthZero.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e13f3e6b0bc79ef9722b75d49a6a4cfc5adc4d62")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb81647126dee876190d2f185ac66710b1250bbd")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthZero.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthZero.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

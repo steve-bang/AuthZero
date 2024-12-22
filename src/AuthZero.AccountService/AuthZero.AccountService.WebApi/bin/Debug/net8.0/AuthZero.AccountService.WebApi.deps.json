@@ -8,15 +8,41 @@
     ".NETCoreApp,Version=v8.0": {
       "AuthZero.AccountService.WebApi/1.0.0": {
         "dependencies": {
+          "Asp.Versioning.Http": "8.1.0",
           "Aspire.Microsoft.EntityFrameworkCore.SqlServer": "8.2.2",
-          "AuthAero.AccountService.Application": "1.0.0",
+          "AuthZero.AccountService.Application": "1.0.0",
           "AuthZero.ServiceDefaults": "1.0.0",
+          "AuthZero.Shared": "1.0.0",
+          "FluentValidation": "11.10.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.10.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.10",
           "Microsoft.EntityFrameworkCore.Design": "8.0.7",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
           "AuthZero.AccountService.WebApi.dll": {}
+        }
+      },
+      "Asp.Versioning.Abstractions/8.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Asp.Versioning.Abstractions.dll": {
+            "assemblyVersion": "8.1.0.0",
+            "fileVersion": "8.1.8851.31619"
+          }
+        }
+      },
+      "Asp.Versioning.Http/8.1.0": {
+        "dependencies": {
+          "Asp.Versioning.Abstractions": "8.1.0"
+        },
+        "runtime": {
+          "lib/net8.0/Asp.Versioning.Http.dll": {
+            "assemblyVersion": "8.1.0.0",
+            "fileVersion": "8.1.8851.31627"
+          }
         }
       },
       "Aspire.Microsoft.EntityFrameworkCore.SqlServer/8.2.2": {
@@ -76,6 +102,26 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.12.0.0",
             "fileVersion": "1.1200.24.31701"
+          }
+        }
+      },
+      "FluentValidation/11.10.0": {
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.10.0.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/11.10.0": {
+        "dependencies": {
+          "FluentValidation": "11.10.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.10.0.0"
           }
         }
       },
@@ -2435,13 +2481,13 @@
       "System.Threading.RateLimiting/8.0.0": {},
       "System.Threading.Tasks.Dataflow/7.0.0": {},
       "System.Threading.Tasks.Extensions/4.5.4": {},
-      "AuthAero.AccountService.Application/1.0.0": {
+      "AuthZero.AccountService.Application/1.0.0": {
         "dependencies": {
           "AuthZero.AccountService.Domain": "1.0.0",
           "AuthZero.AccountService.Infrastructure": "1.0.0"
         },
         "runtime": {
-          "AuthAero.AccountService.Application.dll": {
+          "AuthZero.AccountService.Application.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -2487,6 +2533,19 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "AuthZero.Shared/1.0.0": {
+        "dependencies": {
+          "Aspire.Microsoft.EntityFrameworkCore.SqlServer": "8.2.2",
+          "Microsoft.Extensions.DependencyInjection": "8.0.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.1"
+        },
+        "runtime": {
+          "AuthZero.Shared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -2495,6 +2554,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Asp.Versioning.Abstractions/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mpeNZyMdvrHztJwR1sXIUQ+3iioEU97YMBnFA9WLbsPOYhGwDJnqJMmEd8ny7kcmS9OjTHoEuX/bSXXY3brIFA==",
+      "path": "asp.versioning.abstractions/8.1.0",
+      "hashPath": "asp.versioning.abstractions.8.1.0.nupkg.sha512"
+    },
+    "Asp.Versioning.Http/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xu4xF62Cu9JqYi/CTa2TiK5kyHoa4EluPynj/bPFWDmlTIPzuJQbBI5RgFYVRFHjFVvWMoA77acRaFu7i7Wzqg==",
+      "path": "asp.versioning.http/8.1.0",
+      "hashPath": "asp.versioning.http.8.1.0.nupkg.sha512"
     },
     "Aspire.Microsoft.EntityFrameworkCore.SqlServer/8.2.2": {
       "type": "package",
@@ -2516,6 +2589,20 @@
       "sha512": "sha512-OBIM3aPz8n9oEO5fdnee+Vsc5Nl4W3FeslPpESyDiyByntQI5BAa76KD60eFXm9ulevnwxGZP9YXL8Y+paI5Uw==",
       "path": "azure.identity/1.12.0",
       "hashPath": "azure.identity.1.12.0.nupkg.sha512"
+    },
+    "FluentValidation/11.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qsJGSJDdZ8qiG+lVJ70PZfJHcEdq8UQZ/tZDXoj78/iHKG6lVKtMJsD11zyyv/IPc7rwqGqnFoFLTNzpo3IPYg==",
+      "path": "fluentvalidation/11.10.0",
+      "hashPath": "fluentvalidation.11.10.0.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/11.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hIe+i6P+ZUxFh6lJOBXRs4EGE/thcub0Lpdk2FF2/JBKJUqDqE2xDnBIiqTMkpXLoekgBN0SlhJT0vpeNr1J6g==",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.10.0",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.10.0.nupkg.sha512"
     },
     "Google.Protobuf/3.22.5": {
       "type": "package",
@@ -3924,7 +4011,7 @@
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
-    "AuthAero.AccountService.Application/1.0.0": {
+    "AuthZero.AccountService.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3940,6 +4027,11 @@
       "sha512": ""
     },
     "AuthZero.ServiceDefaults/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AuthZero.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

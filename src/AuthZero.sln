@@ -13,13 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthZero.WebApp", "WebApp\A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthZero.AccountService", "AuthZero.AccountService", "{703C28E8-0A7D-4C3F-8939-384A1B9122B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthAero.AccountService.Application", "AuthZero.AccountService\AuthAero.AccountService.Application\AuthAero.AccountService.Application.csproj", "{AB19CD27-F71B-4963-B221-A752E9A3AB78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthZero.AccountService.Application", "AuthZero.AccountService\AuthZero.AccountService.Application\AuthZero.AccountService.Application.csproj", "{AB19CD27-F71B-4963-B221-A752E9A3AB78}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthZero.AccountService.WebApi", "AuthZero.AccountService\AuthZero.AccountService.WebApi\AuthZero.AccountService.WebApi.csproj", "{D59C5CC5-A3A1-4570-88DB-7F87F47F5BAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthZero.AccountService.Domain", "AuthZero.AccountService\AuthZero.AccountService.Domain\AuthZero.AccountService.Domain.csproj", "{C84F0A97-867E-41A9-85D8-768722E9274A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthZero.AccountService.Infrastructure", "AuthZero.AccountService\AuthZero.AccountService.Infrastructure\AuthZero.AccountService.Infrastructure.csproj", "{CF69509D-02E8-456D-B56E-1F13A91DD3D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthZero.Shared", "AuthZero.Shared\AuthZero.Shared.csproj", "{1574DE6B-743C-4380-A94A-FFE92AD03E5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +68,10 @@ Global
 		{38FB149C-8BEC-41F8-A838-D82AF3695D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38FB149C-8BEC-41F8-A838-D82AF3695D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38FB149C-8BEC-41F8-A838-D82AF3695D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1574DE6B-743C-4380-A94A-FFE92AD03E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1574DE6B-743C-4380-A94A-FFE92AD03E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1574DE6B-743C-4380-A94A-FFE92AD03E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1574DE6B-743C-4380-A94A-FFE92AD03E5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A49C9FA6-E846-4026-9B81-6FB41F3F5F1A} = {EDCED254-B033-48DB-A5CC-308AE55492EB}
