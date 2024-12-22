@@ -15,3 +15,4 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/refint/AuthAero.AccountService.Application.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.AccountService.Application.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/ref/AuthAero.AccountService.Application.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthAero.AccountService.Application/obj/Debug/net8.0/AuthAero.AccountService.Application.sourcelink.json

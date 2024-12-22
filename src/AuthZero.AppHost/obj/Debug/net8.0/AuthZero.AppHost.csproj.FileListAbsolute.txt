@@ -173,3 +173,5 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/obj/Debug/net8.0/Aspire/references/AuthZero_AccountService_MigrationService.ProjectMetadata.g.cs
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/obj/Debug/net8.0/AuthZero.AppHost.sourcelink.json

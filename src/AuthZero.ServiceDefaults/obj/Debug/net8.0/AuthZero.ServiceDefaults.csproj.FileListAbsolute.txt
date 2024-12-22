@@ -10,3 +10,4 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/obj/Debug/net8.0/refint/AuthZero.ServiceDefaults.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/obj/Debug/net8.0/AuthZero.ServiceDefaults.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/obj/Debug/net8.0/ref/AuthZero.ServiceDefaults.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/obj/Debug/net8.0/AuthZero.ServiceDefaults.sourcelink.json

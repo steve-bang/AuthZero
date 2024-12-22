@@ -15,3 +15,4 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/obj/Debug/net8.0/ref/AuthZero.AccountService.Infrastructure.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/bin/Debug/net8.0/AuthZero.AccountService.Infrastructure.runtimeconfig.json
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/obj/Debug/net8.0/AuthZero.AccountService.Infrastructure.genruntimeconfig.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/obj/Debug/net8.0/AuthZero.AccountService.Infrastructure.sourcelink.json

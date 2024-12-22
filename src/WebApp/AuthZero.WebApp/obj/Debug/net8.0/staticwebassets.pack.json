@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net8.0/scopedcss/projectbundle/AuthZero.WebApp.bundle.scp.css",
-      "PackagePath": "staticwebassets/AuthZero.WebApp.bundle.scp.css"
+      "PackagePath": "staticwebassets/AuthZero.WebApp.mmfwpl4ro2.bundle.scp.css"
     },
     {
       "Id": "/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/wwwroot/app.css",
@@ -19,6 +19,10 @@
     {
       "Id": "/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.AuthZero.WebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.AuthZero.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",

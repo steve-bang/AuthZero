@@ -24,5 +24,9 @@ public static class Extensions
         string connectionName = "Account";
 
         builder.AddSqlServerDbContext<AccountServiceContext>(connectionName: connectionName);
+
+        // Add the migration service. When the application starts, it will check if the database is up to date. 
+        // If not, it will run the migration to update the database.
+        builder.Services.AddMigration<AccountServiceContext>();
     }
 }

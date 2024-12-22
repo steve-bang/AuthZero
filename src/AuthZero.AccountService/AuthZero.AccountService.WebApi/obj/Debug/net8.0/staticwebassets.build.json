@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "1Y73KPKGQmC3te09ugcZ72Hlbt3U9DGI8MoK5yCInc4=",
+  "Hash": "HqhB5Nw2GNcbiuVoFUbA0Tf2OE9WCsSt/HQ3mZRBsoM=",
   "Source": "AuthZero.AccountService.WebApi",
   "BasePath": "_content/AuthZero.AccountService.WebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
