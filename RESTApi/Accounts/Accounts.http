@@ -7,9 +7,17 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "emailAddress" : "email@example.com",
+    "emailAddress" : "mrsteve@example.com",
     "password" : "password",
     "confirmPassword" : "password"
 }
 
 ### Login user
+POST {{Host}}/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "emailAddress" : "mrsteve@example.com",
+    "password" : "password"
+}

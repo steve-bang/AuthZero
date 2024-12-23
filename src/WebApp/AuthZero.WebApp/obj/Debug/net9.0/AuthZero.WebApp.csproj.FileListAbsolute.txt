@@ -1,3 +1,11 @@
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.csproj.AssemblyReference.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.AssemblyInfoInputs.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.AssemblyInfo.cs
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.csproj.CoreCompileInputs.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.MvcApplicationPartsAssemblyInfo.cs
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.MvcApplicationPartsAssemblyInfo.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.sourcelink.json
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/appsettings.Development.json
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/appsettings.json
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/AuthZero.WebApp.staticwebassets.runtime.json
@@ -38,14 +46,6 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/Polly.RateLimiting.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/AuthZero.ServiceDefaults.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/AuthZero.ServiceDefaults.pdb
-/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.csproj.AssemblyReference.cache
-/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.GeneratedMSBuildEditorConfig.editorconfig
-/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.AssemblyInfoInputs.cache
-/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.AssemblyInfo.cs
-/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.csproj.CoreCompileInputs.cache
-/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.MvcApplicationPartsAssemblyInfo.cs
-/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.MvcApplicationPartsAssemblyInfo.cache
-/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.sourcelink.json
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/scopedcss/Components/Layout/MainLayout.razor.rz.scp.css
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/scopedcss/Components/Layout/NavMenu.razor.rz.scp.css
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/scopedcss/bundle/AuthZero.WebApp.styles.css

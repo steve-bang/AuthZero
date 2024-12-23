@@ -1,5 +1,4 @@
 
-
 namespace AuthZero.AccountService.Application.Features.Commands;
 
 /// <summary>
