@@ -34,6 +34,8 @@ public static partial class Extensions
             http.AddServiceDiscovery();
         });
 
+        builder.Services.AddHttpContextAccessor();
+
         // Uncomment the following to restrict the allowed schemes for service discovery.
         // builder.Services.Configure<ServiceDiscoveryOptions>(options =>
         // {

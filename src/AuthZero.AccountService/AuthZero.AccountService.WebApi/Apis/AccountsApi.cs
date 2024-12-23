@@ -1,9 +1,11 @@
 
 
+using System.Security.Claims;
 using AuthZero.AccountService.Application.Features.Commands;
+using AuthZero.AccountService.Application.Features.Queries;
 using AuthZero.AccountService.Application.Models;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
+using AuthZero.AccountService.Domain.AggregatesModel.User;
+
 
 
 namespace AuthZero.AccountService.Apis;
@@ -15,29 +17,57 @@ public static class AccountsApi
         var api = app.MapGroup("api/accounts");
 
         // POST api/accounts/register
-        api.MapPost("register", RegisterUserAsync);
+        api.MapPost("register", RegisterUserAsync).AllowAnonymous();
 
         // POST api/accounts/login
-        api.MapPost("login", LoginUserAsync);
+        api.MapPost("login", LoginUserAsync).AllowAnonymous();
+
+
+        // GET api/accounts/{id}
+        // If the id is me, it will return the current user id
+        // Otherwise, it will return the user id by the id provided
+        api.MapGet("{id}", GetUserByIdAsync).RequireAuthorization();
+
 
         return api;
     }
 
     public static async Task<Guid> RegisterUserAsync(
         RegisterUserCommand command, 
-        [FromServices] IMediator mediator)
+        [AsParameters] AccountService accountService)
     {
-        var idNewUser = await mediator.Send(command);
+        var idNewUser = await accountService.Mediator.Send(command);
 
         return idNewUser;
     }
 
     public static async Task<ResultUserLoginSuccess> LoginUserAsync(
         LoginUserCommand command, 
-        [FromServices] IMediator mediator)
+        [AsParameters] AccountService accountService)
     {
-        var result = await mediator.Send(command);
+        var result = await accountService.Mediator.Send(command);
 
         return result;
+    }
+
+    public static async Task<User?> GetUserByIdAsync(
+        string id, 
+        [AsParameters] AccountService accountService
+    )
+    {
+
+        // If the id is me, it will return the current user id
+        if (id == "me")
+        {
+            var user = accountService.HttpContextAccessor.HttpContext.User;
+
+            id = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        }
+
+        // Otherwise, it will return the user id by the id provided
+
+        GetUserByIdQuery query = new(Guid.Parse(id));
+
+        return await accountService.Mediator.Send(query);
     }
 }
