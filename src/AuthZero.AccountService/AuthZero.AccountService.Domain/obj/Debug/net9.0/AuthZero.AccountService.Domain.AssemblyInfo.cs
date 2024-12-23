@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthZero.AccountService.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96bf2a8169e7518703a4a6ec87e1c464acc08772")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e070424523eb1fee604222f1b05e636aae0448b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthZero.AccountService.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthZero.AccountService.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

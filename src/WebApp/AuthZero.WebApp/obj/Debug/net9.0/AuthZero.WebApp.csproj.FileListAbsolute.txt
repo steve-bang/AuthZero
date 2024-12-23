@@ -70,3 +70,11 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/AuthZero.WebApp.genruntimeconfig.cache
 /Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/obj/Debug/net9.0/ref/AuthZero.WebApp.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/WebApp/AuthZero.WebApp/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll

@@ -3,6 +3,7 @@ using AuthZero.AccountService.Application;
 using AuthZero.AccountService.Domain.Interfaces;
 using AuthZero.AccountService.Domain.Repositories;
 using AuthZero.AccountService.Infrastructure;
+using AuthZero.AccountService.Infrastructure.Common;
 using AuthZero.AccountService.Infrastructure.Interfaces;
 using AuthZero.AccountService.Infrastructure.Repositories;
 using AuthZero.Shared;
@@ -16,6 +17,8 @@ public static class Extensions
     /// </summary>
     public static void AddApplicationServices(this IHostApplicationBuilder builder)
     {
+        var configuration = builder.Configuration;
+
         // Add the database context
         builder.AddDatabaseContext();
 
@@ -24,6 +27,21 @@ public static class Extensions
 
         // Add the password hasher
         builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+
+        
+        var jwtSettings = configuration.GetSection("JwtSettings");
+        if(!jwtSettings.Exists())
+        {
+            throw new Exception("JwtSettings section is missing in the appsettings.json file.");    
+        }
+
+        var jwtSettingsValue = jwtSettings.Get<JwtSettings>();
+
+        builder.Services.AddSingleton(jwtSettingsValue);
+
+        // Add the JWT provider
+        builder.Services.AddScoped<IJwtProvider, JwtProvider>();
+        
 
         // Add the repositories
         builder.Services.AddScoped<IUserRepository, UserRepository>();

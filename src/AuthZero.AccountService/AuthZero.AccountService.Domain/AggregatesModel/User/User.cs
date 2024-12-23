@@ -89,7 +89,10 @@ public class User : AggregateRoot
         LastName = lastName;
     }
 
-    public void UpdateLastLogin()
+    /// <summary>
+    /// Handles the login of the user.
+    /// </summary>
+    public void Login()
     {
         LastLogin = DateTime.UtcNow;
     }

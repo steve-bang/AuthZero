@@ -304,3 +304,4 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/obj/Debug/net9.0/AuthZero.AccountService.WebApi.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/obj/Debug/net9.0/AuthZero.AccountService.WebApi.genruntimeconfig.cache
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/obj/Debug/net9.0/ref/AuthZero.AccountService.WebApi.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

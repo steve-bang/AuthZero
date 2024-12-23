@@ -1,6 +1,7 @@
 
 using AuthZero.AccountService.Apis;
 using AuthZero.AccountService.WebApi.Extensions;
+using AuthZero.ServiceDefaults;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
 builder.AddApplicationServices();
 builder.Services.AddProblemDetails();
+
+builder.AddDefaultAuthentication();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -28,10 +31,13 @@ app.UseHttpsRedirection();
 
 app.MapDefaultEndpoints();
 
-
+// Maps all API endpoints
 app.MapAccountsApiV1();
 
 app.UseDefaultOpenApi();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 await app.RunAsync();
 

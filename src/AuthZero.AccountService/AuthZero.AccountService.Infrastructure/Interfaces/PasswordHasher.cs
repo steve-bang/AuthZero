@@ -1,6 +1,5 @@
 
 using System.Security.Cryptography;
-using System.Text;
 using AuthZero.AccountService.Domain.Interfaces;
 
 namespace AuthZero.AccountService.Infrastructure.Interfaces

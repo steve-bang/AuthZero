@@ -4,7 +4,8 @@ namespace AuthZero.AccountService.Application.Features.Commands;
 public class LoginUserCommandHandler
 (
     IUserRepository _userRepository,
-    IPasswordHasher _passwordHasher
+    IPasswordHasher _passwordHasher,
+    IJwtProvider _jwtProvider
 ) : IRequestHandler<LoginUserCommand, ResultUserLoginSuccess>
 {
     public async Task<ResultUserLoginSuccess> Handle(LoginUserCommand request, CancellationToken cancellationToken)
@@ -21,19 +22,24 @@ public class LoginUserCommandHandler
             return new ResultUserLoginSuccess();
 
         // Update the last login date
-        user.UpdateLastLogin();
+        user.Login();
 
         _userRepository.Update(user);
 
         // Save the changes
         _ = _userRepository.UnitOfWork.SaveChangesAsync(cancellationToken);
 
-        return new ResultUserLoginSuccess
-        {
-            Id = user.Id,
-            AccessToken = "access_token",
-            RefreshToken = "refresh_token"
-        };
+
+        // Generate the JWT token
+        _jwtProvider.GenerateToken(user, out string accessToken, out string refreshToken, out DateTime accessTokenExpiry);
+
+        // Return the success result
+        return new ResultUserLoginSuccess(
+            id: user.Id,
+            accessToken: accessToken,
+            refreshToken: refreshToken,
+            expiresIn: accessTokenExpiry
+        );
 
     }
 }

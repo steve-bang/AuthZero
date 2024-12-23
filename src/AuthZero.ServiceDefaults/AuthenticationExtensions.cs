@@ -38,7 +38,7 @@ public static class AuthenticationExtensions
 
                     options.Authority = identityUrl;
                     options.Audience = audience;
-                    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                    options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,
                         ValidateAudience = true,
