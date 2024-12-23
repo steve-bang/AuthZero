@@ -17,41 +17,45 @@ public static class AuthenticationExtensions
 
         // {
         //   "Identity": {
-        //     "Url": "http://identity",
+        //     "Issuer": "http://identity",
         //     "Audience": "basket",
         //     "SecretKey": "*******"
         //    }
         // }
 
         var identitySection = configuration.GetSection("Identity");
-        
-        if(!identitySection.Exists())
+
+        if (!identitySection.Exists())
+        {
             return servivces;
+        }
 
         servivces
             .AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(
-                options => {
-                    var identityUrl = identitySection.GetValue<string>("Url");
-                    var audience = identitySection.GetValue<string>("Audience");
-                    var secretKey = identitySection.GetValue<string>("SecretKey");
+            options =>
+            {
+                var identityUrl = identitySection.GetValue<string>("Issuer");
+                var audience = identitySection.GetValue<string>("Audience");
+                var secretKey = identitySection.GetValue<string>("Secret");
 
-                    options.Authority = identityUrl;
-                    options.Audience = audience;
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        ValidIssuer = identityUrl,
-                        ValidAudience = audience,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
-                    };
-                }
-            );
+
+                options.Authority = identityUrl;
+                options.Audience = audience;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = identityUrl,
+                    ValidAudience = audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
+                };
+            });
 
         servivces.AddAuthorization();
+
 
         return servivces;
     }

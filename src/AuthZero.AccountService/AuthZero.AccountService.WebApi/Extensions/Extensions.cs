@@ -6,6 +6,7 @@ using AuthZero.AccountService.Infrastructure;
 using AuthZero.AccountService.Infrastructure.Common;
 using AuthZero.AccountService.Infrastructure.Interfaces;
 using AuthZero.AccountService.Infrastructure.Repositories;
+using AuthZero.ServiceDefaults;
 using AuthZero.Shared;
 
 namespace AuthZero.AccountService.WebApi.Extensions;
@@ -25,11 +26,13 @@ public static class Extensions
         // Add the application services
         builder.Services.AddApplication();
 
+        builder.AddDefaultAuthentication();
+
         // Add the password hasher
         builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
         
-        var jwtSettings = configuration.GetSection("JwtSettings");
+        var jwtSettings = configuration.GetSection("Identity");
         if(!jwtSettings.Exists())
         {
             throw new Exception("JwtSettings section is missing in the appsettings.json file.");    
