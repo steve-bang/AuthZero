@@ -1,4 +1,6 @@
 
+using AuthZero.Shared.Exceptions;
+
 namespace AuthZero.AccountService.Application.Features.Queries;
 
 public class GetUserByIdQueryHandler(
@@ -6,8 +8,15 @@ public class GetUserByIdQueryHandler(
 ) : IRequestHandler<GetUserByIdQuery, User?>
 {
 
-    public async Task<User?> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
+    public async Task<User> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
-        return await _userRepository.GetByIdAsync(request.Id);
+        var user = await _userRepository.GetByIdAsync(request.Id);
+
+        if (user is null)
+        {
+            throw new NotFoundDataException("User", "User.NotFound");
+        }
+
+        return user;
     }
 }
