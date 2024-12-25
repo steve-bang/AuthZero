@@ -2422,6 +2422,7 @@
       },
       "AuthZero.ServiceDefaults/1.0.0": {
         "dependencies": {
+          "AuthZero.Shared": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.0",
           "Microsoft.Extensions.Http.Resilience": "8.10.0",

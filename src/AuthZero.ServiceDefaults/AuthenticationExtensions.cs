@@ -1,5 +1,6 @@
 
 using System.Text;
+using AuthZero.Shared.Exceptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -51,6 +52,13 @@ public static class AuthenticationExtensions
                     ValidIssuer = identityUrl,
                     ValidAudience = audience,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
+                };
+
+                options.Events = new JwtBearerEvents
+                {
+                    OnChallenge = context => {
+                        throw new UnauthorizedException();
+                    } 
                 };
             });
 

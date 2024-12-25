@@ -1,13 +1,13 @@
 
 using AuthZero.AccountService.Apis;
 using AuthZero.AccountService.WebApi.Extensions;
-using AuthZero.ServiceDefaults;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
 builder.AddApplicationServices();
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
 
@@ -35,8 +35,11 @@ app.MapAccountsApiV1();
 
 app.UseDefaultOpenApi();
 
+app.UseExceptionHandler();
+
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 await app.RunAsync();
 

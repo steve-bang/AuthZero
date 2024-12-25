@@ -11,3 +11,6 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/obj/Debug/net9.0/refint/AuthZero.ServiceDefaults.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/obj/Debug/net9.0/AuthZero.ServiceDefaults.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/obj/Debug/net9.0/ref/AuthZero.ServiceDefaults.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/bin/Debug/net9.0/AuthZero.Shared.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/bin/Debug/net9.0/AuthZero.Shared.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.ServiceDefaults/obj/Debug/net9.0/AuthZero.753D88AD.Up2Date

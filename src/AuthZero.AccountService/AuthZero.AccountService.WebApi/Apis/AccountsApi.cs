@@ -17,17 +17,16 @@ public static class AccountsApi
         var api = app.MapGroup("api/accounts");
 
         // POST api/accounts/register
-        api.MapPost("register", RegisterUserAsync).AllowAnonymous();
+        api.MapPost("register", RegisterUserAsync);
 
         // POST api/accounts/login
-        api.MapPost("login", LoginUserAsync).AllowAnonymous();
+        api.MapPost("login", LoginUserAsync);
 
 
         // GET api/accounts/{id}
         // If the id is me, it will return the current user id
         // Otherwise, it will return the user id by the id provided
         api.MapGet("{id}", GetUserByIdAsync).RequireAuthorization();
-
 
         return api;
     }
