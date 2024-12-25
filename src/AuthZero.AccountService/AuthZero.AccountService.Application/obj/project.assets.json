@@ -2916,6 +2916,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "AuthZero.Shared": "1.0.0",
           "MediatR": "12.4.1"
         },
         "compile": {
@@ -2938,6 +2939,21 @@
         },
         "runtime": {
           "bin/placeholder/AuthZero.AccountService.Infrastructure.dll": {}
+        }
+      },
+      "AuthZero.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Aspire.Microsoft.EntityFrameworkCore.SqlServer": "8.2.2",
+          "Microsoft.Extensions.DependencyInjection": "8.0.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "bin/placeholder/AuthZero.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AuthZero.Shared.dll": {}
         }
       }
     }
@@ -8040,12 +8056,18 @@
       "type": "project",
       "path": "../AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj",
       "msbuildProject": "../AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj"
+    },
+    "AuthZero.Shared/1.0.0": {
+      "type": "project",
+      "path": "../../AuthZero.Shared/AuthZero.Shared.csproj",
+      "msbuildProject": "../../AuthZero.Shared/AuthZero.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "AuthZero.AccountService.Domain >= 1.0.0",
-      "AuthZero.AccountService.Infrastructure >= 1.0.0"
+      "AuthZero.AccountService.Infrastructure >= 1.0.0",
+      "AuthZero.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8078,6 +8100,9 @@
             },
             "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj": {
               "projectPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj"
+            },
+            "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/AuthZero.Shared.csproj": {
+              "projectPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/AuthZero.Shared.csproj"
             }
           }
         }

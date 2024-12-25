@@ -2387,7 +2387,8 @@
       "AuthZero.AccountService.Application/1.0.0": {
         "dependencies": {
           "AuthZero.AccountService.Domain": "1.0.0",
-          "AuthZero.AccountService.Infrastructure": "1.0.0"
+          "AuthZero.AccountService.Infrastructure": "1.0.0",
+          "AuthZero.Shared": "1.0.0"
         },
         "runtime": {
           "AuthZero.AccountService.Application.dll": {
@@ -2398,6 +2399,7 @@
       },
       "AuthZero.AccountService.Domain/1.0.0": {
         "dependencies": {
+          "AuthZero.Shared": "1.0.0",
           "MediatR": "12.4.1"
         },
         "runtime": {

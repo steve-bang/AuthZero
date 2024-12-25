@@ -16,3 +16,5 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Application/obj/Debug/net9.0/refint/AuthZero.AccountService.Application.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Application/obj/Debug/net9.0/AuthZero.AccountService.Application.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Application/obj/Debug/net9.0/ref/AuthZero.AccountService.Application.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Application/bin/Debug/net9.0/AuthZero.Shared.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Application/bin/Debug/net9.0/AuthZero.Shared.pdb

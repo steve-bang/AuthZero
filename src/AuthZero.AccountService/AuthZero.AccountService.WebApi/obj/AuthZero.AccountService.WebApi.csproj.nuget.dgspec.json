@@ -31,6 +31,9 @@
               },
               "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj": {
                 "projectPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj"
+              },
+              "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/AuthZero.Shared.csproj": {
+                "projectPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/AuthZero.Shared.csproj"
               }
             }
           }
@@ -91,7 +94,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/AuthZero.Shared.csproj": {
+                "projectPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/AuthZero.Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
