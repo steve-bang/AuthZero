@@ -174,3 +174,4 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/obj/Debug/net9.0/AuthZero.AppHost.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/obj/Debug/net9.0/AuthZero.AppHost.genruntimeconfig.cache
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/obj/Debug/net9.0/ref/AuthZero.AppHost.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/obj/Debug/net9.0/Aspire/references/MigrationService.ProjectMetadata.g.cs

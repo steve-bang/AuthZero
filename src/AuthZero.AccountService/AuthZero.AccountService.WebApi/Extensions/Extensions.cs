@@ -8,6 +8,8 @@ using AuthZero.AccountService.Infrastructure.Interfaces;
 using AuthZero.AccountService.Infrastructure.Repositories;
 using AuthZero.ServiceDefaults;
 using AuthZero.Shared;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace AuthZero.AccountService.WebApi.Extensions;
 
@@ -59,7 +61,14 @@ public static class Extensions
         // This is the connection string name in the AppHost project provide. See in the AuthZero.AppHost/Program.cs
         string connectionName = "Account";
 
-        builder.AddSqlServerDbContext<AccountServiceContext>(connectionName: connectionName);
+        //builder.AddSqlServerDbContext<AccountServiceContext>(connectionName);
+        builder.Services.AddDbContext<AccountServiceContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString(connectionName), sqlOptions =>
+            {
+                // Workaround for https://github.com/dotnet/aspire/issues/1023
+                //sqlOptions.ExecutionStrategy(c => new RetryingSqlServerRetryingExecutionStrategy(c));
+            }));
+        builder.EnrichSqlServerDbContext<AccountServiceContext>();
 
         // Add the migration service. When the application starts, it will check if the database is up to date. 
         // If not, it will run the migration to update the database.

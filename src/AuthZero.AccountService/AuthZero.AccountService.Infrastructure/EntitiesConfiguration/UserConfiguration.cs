@@ -53,5 +53,14 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder
             .Property(x => x.Bio);
+
+        builder
+            .Property(x => x.LastUpdateAt)
+            .HasColumnName("Last_Update_At");
+
+        builder
+            .Property(x => x.CreatedAt)
+            .HasColumnName("Created_At")
+            .HasDefaultValue(DateTime.UtcNow);
     }
 }

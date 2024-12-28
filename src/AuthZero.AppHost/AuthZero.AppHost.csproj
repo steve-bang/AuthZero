@@ -19,6 +19,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="../AuthZero.AccountService/MigrationService/MigrationService.csproj" />
     <ProjectReference Include="..\AuthZero.AccountService\AuthZero.AccountService.WebApi\AuthZero.AccountService.WebApi.csproj" />
     <ProjectReference Include="..\WebApp\AuthZero.WebApp\AuthZero.WebApp.csproj" />
   </ItemGroup>

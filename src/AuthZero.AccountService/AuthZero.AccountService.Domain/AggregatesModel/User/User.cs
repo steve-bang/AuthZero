@@ -49,6 +49,10 @@ public class User : AggregateRoot
     /// </summary>
     public DateTime? LastLogin { get; set; }
 
+    public DateTime? LastUpdateAt { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
     /// <summary>
     /// Constructor for the User class.
     /// </summary>
@@ -69,6 +73,7 @@ public class User : AggregateRoot
         Bio = bio;
         FirstName = firstName;
         LastName = lastName;
+        CreatedAt = DateTime.UtcNow;
     }
 
     public void Update(
@@ -117,5 +122,14 @@ public class User : AggregateRoot
     )
     {
         return new User(emailAddress, passwordHash, salt, avatarUrl, bio, firstName, lastName);
+    }
+
+    public void Edit(string avatarUrl, string bio, string firstName, string lastName)
+    {
+        AvatarUrl = avatarUrl;
+        Bio = bio;
+        FirstName = firstName;
+        LastName = lastName;
+        LastUpdateAt = DateTime.UtcNow;
     }
 }

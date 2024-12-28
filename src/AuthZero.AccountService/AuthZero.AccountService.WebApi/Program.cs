@@ -31,7 +31,8 @@ app.UseHttpsRedirection();
 app.MapDefaultEndpoints();
 
 // Maps all API endpoints
-app.MapAccountsApiV1();
+app.MapAuthApiV1();
+app.MapUserApi();
 
 app.UseDefaultOpenApi();
 

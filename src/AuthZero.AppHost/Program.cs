@@ -15,15 +15,21 @@ var sqlServerAccountService = builder
         "sql"
         //, port: int.Parse(portDatabase.Resource.Value)
     )
-    .WithDataBindMount(source: "../../database");
+    .WithDataBindMount(source: "../../database")
+    .WithLifetime(ContainerLifetime.Persistent)
+    .AddDatabase("Account");
 
 // Add a database to the SQL Server is AuthZero.Account
 // This is a name connection with "Account" and it's used by the AuthZero.AccountService project.
-var dbAccount = sqlServerAccountService.AddDatabase("Account");
+
+// builder.AddProject<Projects.MigrationService>("account-migration-service")
+//     .WithReference(sqlServerAccountService);
+
 
 builder.AddProject<Projects.AuthZero_AccountService_WebApi>("AccountService-WebApi")
-        .WithReference(dbAccount)
-        .WaitFor(dbAccount);
+        .WithReference(sqlServerAccountService)
+        .WaitFor(sqlServerAccountService);
+
 
 
 builder.AddProject<Projects.AuthZero_WebApp>("AuthZero-WebApp");

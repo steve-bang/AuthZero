@@ -3,7 +3,9 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/bin/Debug/net9.0/AuthZero.AccountService.Infrastructure.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/bin/Debug/net9.0/AuthZero.AccountService.Infrastructure.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/bin/Debug/net9.0/AuthZero.AccountService.Domain.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/bin/Debug/net9.0/AuthZero.Shared.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/bin/Debug/net9.0/AuthZero.AccountService.Domain.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/bin/Debug/net9.0/AuthZero.Shared.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/obj/Debug/net9.0/AuthZero.AccountService.Infrastructure.csproj.AssemblyReference.cache
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/obj/Debug/net9.0/AuthZero.AccountService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/obj/Debug/net9.0/AuthZero.AccountService.Infrastructure.AssemblyInfoInputs.cache
@@ -16,5 +18,3 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/obj/Debug/net9.0/AuthZero.AccountService.Infrastructure.pdb
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/obj/Debug/net9.0/AuthZero.AccountService.Infrastructure.genruntimeconfig.cache
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/obj/Debug/net9.0/ref/AuthZero.AccountService.Infrastructure.dll
-/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/bin/Debug/net9.0/AuthZero.Shared.dll
-/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/bin/Debug/net9.0/AuthZero.Shared.pdb

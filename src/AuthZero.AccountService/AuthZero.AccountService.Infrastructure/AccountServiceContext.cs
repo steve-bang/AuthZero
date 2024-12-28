@@ -2,6 +2,7 @@
 
 using AuthZero.AccountService.Domain.AggregatesModel.User;
 using AuthZero.AccountService.Domain.Common;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace AuthZero.AccountService.Infrastructure;
 
@@ -11,13 +12,9 @@ namespace AuthZero.AccountService.Infrastructure;
 /// 1. Move to the AuthZero.AccountService.Infrastructure folder and run the following command:
 /// 2. dotnet ef migrations add your-migraiton --startup-project ../AuthZero.AccountService.WebApi --context AccountServiceContext
 /// </summary>
-public class AccountServiceContext : DbContext, IUnitOfWork
+public class AccountServiceContext(DbContextOptions<AccountServiceContext> options): DbContext(options), IUnitOfWork
 {
     public DbSet<User> Users { get; set; }
-
-    public AccountServiceContext(DbContextOptions<AccountServiceContext> options) : base(options)
-    {
-    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -29,6 +26,12 @@ public class AccountServiceContext : DbContext, IUnitOfWork
                 .ApplyConfigurationsFromAssembly(typeof(AccountServiceContext).Assembly);
 
         base.OnModelCreating(modelBuilder);
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+    optionsBuilder
+        .ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
     }
 
 

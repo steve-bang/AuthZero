@@ -18,7 +18,7 @@ namespace AuthZero.AccountService.Infrastructure.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("AuthZero")
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -36,6 +36,12 @@ namespace AuthZero.AccountService.Infrastructure.Migrations
                     b.Property<string>("Bio")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2024, 12, 28, 7, 46, 32, 464, DateTimeKind.Utc).AddTicks(9640))
+                        .HasColumnName("Created_At");
+
                     b.Property<string>("EmailAddress")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)")
@@ -52,6 +58,10 @@ namespace AuthZero.AccountService.Infrastructure.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Last_Name");
+
+                    b.Property<DateTime?>("LastUpdateAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("Last_Update_At");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
