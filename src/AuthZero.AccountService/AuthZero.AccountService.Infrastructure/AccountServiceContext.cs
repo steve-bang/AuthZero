@@ -12,7 +12,10 @@ namespace AuthZero.AccountService.Infrastructure;
 /// 1. Move to the AuthZero.AccountService.Infrastructure folder and run the following command:
 /// 2. dotnet ef migrations add your-migraiton --startup-project ../AuthZero.AccountService.WebApi --context AccountServiceContext
 /// </summary>
-public class AccountServiceContext(DbContextOptions<AccountServiceContext> options): DbContext(options), IUnitOfWork
+public class AccountServiceContext(
+    DbContextOptions<AccountServiceContext> options,
+    IMediator _mediator
+    ): DbContext(options), IUnitOfWork
 {
     public DbSet<User> Users { get; set; }
 
@@ -43,7 +46,7 @@ public class AccountServiceContext(DbContextOptions<AccountServiceContext> optio
         // side effects from the domain event handlers which are using the same DbContext with "InstancePerLifetimeScope" or "scoped" lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB will make multiple transactions. 
         // You will need to handle eventual consistency and compensatory actions in case of failures in any of the Handlers. 
-        //await _mediator.DispatchDomainEventsAsync(this);
+        await _mediator.DispatchDomainEventsAsync(this);
 
         // After executing this line all the changes (from the Command Handler and Domain Event Handlers) 
         // performed through the DbContext will be committed

@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using AuthZero.AccountService.Application.Features.Commands;
 using AuthZero.AccountService.Application.Features.Queries;
+using AuthZero.AccountService.Application.Models;
 using AuthZero.AccountService.Domain.AggregatesModel.User;
 using AuthZero.AccountService.WebApi.Models;
 using AuthZero.Shared.Models;
@@ -25,7 +26,7 @@ public static class UserApi
         return api;
     }
 
-    public static async Task<ApiResponse<User>> GetUserByIdAsync(
+    public static async Task<ApiResponse<UserResponse>> GetUserByIdAsync(
         string id, 
         [AsParameters] AccountService accountService
     )
@@ -42,9 +43,9 @@ public static class UserApi
         // Otherwise, it will return the user id by the id provided
         GetUserByIdQuery query = new(Guid.Parse(id));
 
-        User user = await accountService.Mediator.Send(query);
+        UserResponse user = await accountService.Mediator.Send(query);
 
-        return ApiResponse<User>.Success(user);
+        return ApiResponse<UserResponse>.Success(user);
     }
 
     public static async Task<ApiResponse<bool>> UpdateUserById(

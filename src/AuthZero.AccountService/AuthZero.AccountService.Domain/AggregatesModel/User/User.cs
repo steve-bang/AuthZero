@@ -1,5 +1,6 @@
 
 using AuthZero.AccountService.Domain.Common;
+using AuthZero.AccountService.Domain.Events;
 
 namespace AuthZero.AccountService.Domain.AggregatesModel.User;
 
@@ -74,6 +75,9 @@ public class User : AggregateRoot
         FirstName = firstName;
         LastName = lastName;
         CreatedAt = DateTime.UtcNow;
+
+        // Add the UserRegisterLoginEvent to the domain events.
+        AddEvent(new UserRegisterEvent(this));
     }
 
     public void Update(
@@ -121,7 +125,9 @@ public class User : AggregateRoot
         string? lastName = null
     )
     {
-        return new User(emailAddress, passwordHash, salt, avatarUrl, bio, firstName, lastName);
+        var user = new User(emailAddress, passwordHash, salt, avatarUrl, bio, firstName, lastName);
+
+        return user;
     }
 
     public void Edit(string avatarUrl, string bio, string firstName, string lastName)

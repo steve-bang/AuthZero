@@ -25,7 +25,7 @@ public class RegisterUserCommandHanlder(
        user = await _userRepository.AddAsync(user);
 
         // Save changes with the Unit of Work
-        await _userRepository.UnitOfWork.SaveChangesAsync(cancellationToken);
+        await _userRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
 
         return user.Id;
     }

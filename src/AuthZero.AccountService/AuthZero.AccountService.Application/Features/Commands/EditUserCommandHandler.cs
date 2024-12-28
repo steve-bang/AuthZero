@@ -21,7 +21,7 @@ public class EditUserCommandHandler(
             lastName: request.LastName
         );
 
-        await _userRepository.UnitOfWork.SaveChangesAsync();
+        await _userRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
 
         return true;
     }

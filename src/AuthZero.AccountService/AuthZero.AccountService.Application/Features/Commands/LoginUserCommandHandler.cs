@@ -27,7 +27,7 @@ public class LoginUserCommandHandler
         _userRepository.Update(user);
 
         // Save the changes
-        _ = _userRepository.UnitOfWork.SaveChangesAsync(cancellationToken);
+        _ = _userRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
 
 
         // Generate the JWT token
