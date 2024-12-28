@@ -1,0 +1,24 @@
+@Host = https://localhost:7159/api/v1/auth
+
+
+### Register
+POST {{Host}}/register
+Accept: application/json
+Content-Type: application/json
+
+{
+    "emailAddress" : "mrsteve@example.com",
+    "password" : "password",
+    "confirmPassword" : "password"
+}
+
+### Login user
+POST {{Host}}/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "emailAddress" : "mrsteve@example.com",
+    "password" : "password"
+}
+

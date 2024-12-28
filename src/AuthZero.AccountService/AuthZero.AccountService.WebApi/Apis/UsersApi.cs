@@ -1,8 +1,11 @@
 
 using System.Security.Claims;
+using AuthZero.AccountService.Application.Features.Commands;
 using AuthZero.AccountService.Application.Features.Queries;
 using AuthZero.AccountService.Domain.AggregatesModel.User;
+using AuthZero.AccountService.WebApi.Models;
 using AuthZero.Shared.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AuthZero.AccountService.Apis;
 
@@ -17,10 +20,12 @@ public static class UserApi
         // Otherwise, it will return the user id by the id provided
         api.MapGet("{id}", GetUserByIdAsync).RequireAuthorization();
 
+        api.MapPatch("{id}", UpdateUserById).RequireAuthorization();
+
         return api;
     }
 
-        public static async Task<ApiResponse<User>> GetUserByIdAsync(
+    public static async Task<ApiResponse<User>> GetUserByIdAsync(
         string id, 
         [AsParameters] AccountService accountService
     )
@@ -40,5 +45,23 @@ public static class UserApi
         User user = await accountService.Mediator.Send(query);
 
         return ApiResponse<User>.Success(user);
+    }
+
+    public static async Task<ApiResponse<bool>> UpdateUserById(
+        Guid id,
+        [FromBody] UserEditRequest userEditRequest, 
+        [AsParameters] AccountService accountService
+    )
+    {
+        EditUserCommand editUserCommand = new EditUserCommand(
+            Id: id, 
+            AvatarUrl: userEditRequest.AvatarUrl, 
+            Bio: userEditRequest.Bio,
+            FirstName: userEditRequest.FirstName,
+            LastName: userEditRequest.LastName);
+
+        var result = await accountService.Mediator.Send(editUserCommand);
+
+        return ApiResponse<bool>.Success(result);
     }
 }
