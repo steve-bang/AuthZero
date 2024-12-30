@@ -9,6 +9,10 @@ var portDatabase = builder.AddParameter(
     name: "port",
     secret: false);
 
+var kafka = builder.AddKafka(name: "account-messages", port: 9092)
+    .WithKafkaUI()
+    .WithLifetime(ContainerLifetime.Persistent);
+
 // Define the SQL Server connection string
 var sqlServerAccountService = builder
     .AddSqlServer(
@@ -27,9 +31,11 @@ var sqlServerAccountService = builder
 
 
 builder.AddProject<Projects.AuthZero_AccountService_WebApi>("AccountService-WebApi")
-        .WithReference(sqlServerAccountService)
-        .WaitFor(sqlServerAccountService);
+        .WithReference(sqlServerAccountService).WaitFor(sqlServerAccountService)
+        .WithReference(kafka);
 
+builder.AddProject<Projects.NotificationService_WebApi>("NotificationService-WebApi")
+    .WithReference(kafka);
 
 
 builder.AddProject<Projects.AuthZero_WebApp>("AuthZero-WebApp");

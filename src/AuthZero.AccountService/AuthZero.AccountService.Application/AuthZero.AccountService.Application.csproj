@@ -12,4 +12,8 @@
     <ProjectReference Include="../AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Aspire.Confluent.Kafka" Version="9.0.0" />
+  </ItemGroup>
+
 </Project>

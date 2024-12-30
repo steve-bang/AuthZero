@@ -1,13 +1,14 @@
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace AuthZero.AccountService.Application;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddApplication(this IServiceCollection services)
+    public static IHostApplicationBuilder AddApplication(this IHostApplicationBuilder builder)
     {
         // Add the MediatR services
-        services.AddMediatR(config =>
+        builder.Services.AddMediatR(config =>
         {
             // Register all the handlers from the current assembly
             config.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
@@ -16,7 +17,8 @@ public static class DependencyInjection
             //config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
         });
 
-        return services;
-    }
+        builder.AddKafkaProducer<string, string>("account-messages");
 
+        return builder;
+    }
 }

@@ -26,7 +26,7 @@ public static class Extensions
         builder.AddDatabaseContext();
 
         // Add the application services
-        builder.Services.AddApplication();
+        builder.AddApplication();
 
         builder.AddDefaultAuthentication();
 

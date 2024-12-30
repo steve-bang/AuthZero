@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Aspire.Hosting.Kafka": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Aspire.Hosting.Orchestration.osx-arm64": {
               "target": "Package",
               "version": "[9.0.0, )",

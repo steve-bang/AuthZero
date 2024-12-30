@@ -11,5 +11,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.telemetry.abstractions/8.10.0/buildTransitive/net6.0/Microsoft.Extensions.Telemetry.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.telemetry.abstractions/8.10.0/buildTransitive/net6.0/Microsoft.Extensions.Telemetry.Abstractions.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.http.resilience/8.10.0/buildTransitive/net6.0/Microsoft.Extensions.Http.Resilience.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.http.resilience/8.10.0/buildTransitive/net6.0/Microsoft.Extensions.Http.Resilience.targets')" />
     <Import Project="$(NuGetPackageRoot)aspire.microsoft.entityframeworkcore.sqlserver/9.0.0/buildTransitive/net9.0/Aspire.Microsoft.EntityFrameworkCore.SqlServer.targets" Condition="Exists('$(NuGetPackageRoot)aspire.microsoft.entityframeworkcore.sqlserver/9.0.0/buildTransitive/net9.0/Aspire.Microsoft.EntityFrameworkCore.SqlServer.targets')" />
+    <Import Project="$(NuGetPackageRoot)aspire.confluent.kafka/9.0.0/buildTransitive/net8.0/Aspire.Confluent.Kafka.targets" Condition="Exists('$(NuGetPackageRoot)aspire.confluent.kafka/9.0.0/buildTransitive/net8.0/Aspire.Confluent.Kafka.targets')" />
   </ImportGroup>
 </Project>
