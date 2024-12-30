@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../../AuthZero.AppHost.Shared/AuthZero.AppHost.Shared.csproj" />
     <ProjectReference Include="../../AuthZero.Shared/AuthZero.Shared.csproj" />
     <ProjectReference Include="../AuthZero.AccountService.Domain/AuthZero.AccountService.Domain.csproj" />
     <ProjectReference Include="../AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj" />

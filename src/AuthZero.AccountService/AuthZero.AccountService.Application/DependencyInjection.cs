@@ -1,3 +1,4 @@
+using AuthZero.AppHost.Shared.Constants;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -17,7 +18,7 @@ public static class DependencyInjection
             //config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
         });
 
-        builder.AddKafkaProducer<string, string>("account-messages");
+        builder.AddKafkaProducer<string, string>(Names.KafkaMessages);
 
         return builder;
     }

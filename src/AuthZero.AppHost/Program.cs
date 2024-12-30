@@ -1,15 +1,15 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
 // Define the SQL Server password, this value will be read from Parameters.password in the AppSettings.json file
-var passwordDatabase = builder.AddParameter(
-    name: "password",
-    secret: true);
+// var passwordDatabase = builder.AddParameter(
+//     name: "password",
+//     secret: true);
 
-var portDatabase = builder.AddParameter(
-    name: "port",
-    secret: false);
+// var portDatabase = builder.AddParameter(
+//     name: "port",
+//     secret: false);
 
-var kafka = builder.AddKafka(name: "account-messages", port: 9092)
+var kafka = builder.AddKafka(name: "kafka-messages", port: 9092)
     .WithKafkaUI()
     .WithLifetime(ContainerLifetime.Persistent);
 

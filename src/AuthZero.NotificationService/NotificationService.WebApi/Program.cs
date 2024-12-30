@@ -1,3 +1,4 @@
+using AuthZero.AppHost.Shared.Constants;
 using AuthZero.NotificationService;
 using AuthZero.NotificationService.WebApi.Services;
 using Confluent.Kafka;
@@ -9,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 
-builder.AddKafkaConsumer<string, string>("account-messages", options =>
+builder.AddKafkaConsumer<string, string>(Names.KafkaMessages, options =>
 {
     options.Config.GroupId = "my-consumer-group";
     options.Config.AutoOffsetReset = AutoOffsetReset.Earliest;

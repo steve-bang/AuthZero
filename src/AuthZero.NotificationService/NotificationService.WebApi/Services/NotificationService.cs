@@ -1,4 +1,5 @@
 
+using AuthZero.AppHost.Shared.Messages;
 using Confluent.Kafka;
 
 namespace AuthZero.NotificationService.WebApi.Services
@@ -8,7 +9,7 @@ namespace AuthZero.NotificationService.WebApi.Services
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            consumer.Subscribe("account-messages");
+            consumer.Subscribe(Topics.UserRegisterSuccess);
 
             while (!stoppingToken.IsCancellationRequested)
             {

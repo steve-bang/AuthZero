@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthZero.NotificationServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService.WebApi", "AuthZero.NotificationService\NotificationService.WebApi\NotificationService.WebApi.csproj", "{F5EB9097-B354-4BA8-A543-088C31360FA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthZero.AppHost.Shared", "AuthZero.AppHost.Shared\AuthZero.AppHost.Shared.csproj", "{CA841ACB-21DB-4CA2-A790-682E6169BE4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,10 @@ Global
 		{F5EB9097-B354-4BA8-A543-088C31360FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5EB9097-B354-4BA8-A543-088C31360FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5EB9097-B354-4BA8-A543-088C31360FA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA841ACB-21DB-4CA2-A790-682E6169BE4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA841ACB-21DB-4CA2-A790-682E6169BE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA841ACB-21DB-4CA2-A790-682E6169BE4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA841ACB-21DB-4CA2-A790-682E6169BE4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A49C9FA6-E846-4026-9B81-6FB41F3F5F1A} = {EDCED254-B033-48DB-A5CC-308AE55492EB}

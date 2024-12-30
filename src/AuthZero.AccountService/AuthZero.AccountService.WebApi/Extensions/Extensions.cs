@@ -28,26 +28,31 @@ public static class Extensions
         // Add the application services
         builder.AddApplication();
 
+        // Add the default authentication
         builder.AddDefaultAuthentication();
 
         // Add the password hasher
         builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
         
+        // Add the JWT settings
         var jwtSettings = configuration.GetSection("Identity");
         if(!jwtSettings.Exists())
         {
-            throw new Exception("JwtSettings section is missing in the appsettings.json file.");    
+            throw new NotImplementedException("JwtSettings section is missing in the appsettings.json file.");    
         }
 
         var jwtSettingsValue = jwtSettings.Get<JwtSettings>();
 
+        if(jwtSettingsValue == null)
+        {
+            throw new NotImplementedException("JwtSettings section is missing in the appsettings.json file.");    
+        }
         builder.Services.AddSingleton(jwtSettingsValue);
 
         // Add the JWT provider
         builder.Services.AddScoped<IJwtProvider, JwtProvider>();
         
-
         // Add the repositories
         builder.Services.AddScoped<IUserRepository, UserRepository>();
     }
@@ -61,12 +66,9 @@ public static class Extensions
         // This is the connection string name in the AppHost project provide. See in the AuthZero.AppHost/Program.cs
         string connectionName = "Account";
 
-        //builder.AddSqlServerDbContext<AccountServiceContext>(connectionName);
         builder.Services.AddDbContext<AccountServiceContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString(connectionName), sqlOptions =>
             {
-                // Workaround for https://github.com/dotnet/aspire/issues/1023
-                //sqlOptions.ExecutionStrategy(c => new RetryingSqlServerRetryingExecutionStrategy(c));
             }));
         builder.EnrichSqlServerDbContext<AccountServiceContext>();
 
