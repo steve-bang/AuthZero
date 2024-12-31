@@ -17,18 +17,14 @@ public class GetUserByIdQueryHandler(
 
         if(userCaching is not null)
         {
-            Console.WriteLine("Query from cache");
-
             return JsonConvert.DeserializeObject<UserResponse>(userCaching) ?? throw new NotFoundDataException("User", "User.NotFound");
         }
 
         var user = await _userRepository.GetByIdAsync(request.Id);
 
-        Console.WriteLine("Query from database");
-
         if (user is null)
         {
-            throw new NotFoundDataException("User", "User.NotFound");
+            throw new NotFoundDataException(nameof(User), "User.NotFound");
         }
 
         await _cache.SetStringAsync($"user.{request.Id}", JsonConvert.SerializeObject(new UserResponse(user)));

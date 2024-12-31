@@ -35,4 +35,10 @@ public class RoleRepository : IRoleRepository
     {
         return await _dbContext.Roles.FirstOrDefaultAsync(r => r.Name == name);
     }
+
+    /// <inheritdoc/>
+    public async Task<IEnumerable<Role>> GetRolesByIdsAsync(IEnumerable<Guid> ids)
+    {
+        return await _dbContext.Roles.Where(r => ids.Contains(r.Id)).ToListAsync();
+    }
 }

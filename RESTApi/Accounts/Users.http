@@ -1,6 +1,6 @@
 @Host = https://localhost:7159/api/v1/users
 @UserId = a9ad6829-10f7-404e-224f-08dd2274641d
-@BearerToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImE5YWQ2ODI5LTEwZjctNDA0ZS0yMjRmLTA4ZGQyMjc0NjQxZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Im1yc3RldmVAZXhhbXBsZS5jb20iLCJleHAiOjE3MzU1OTc4NzMsImlzcyI6Imh0dHBzOi8vYXV0aHplcm8uY29tIiwiYXVkIjoiaHR0cHM6Ly9hdXRoemVyby5jb20ifQ.zQfl0CVRYZm7e5S4enzfVadcINaadRi-E76alCIdqTc
+@BearerToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImE5YWQ2ODI5LTEwZjctNDA0ZS0yMjRmLTA4ZGQyMjc0NjQxZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Im1yc3RldmVAZXhhbXBsZS5jb20iLCJleHAiOjE3MzU4NTUzNjUsImlzcyI6Imh0dHBzOi8vYXV0aHplcm8uY29tIiwiYXVkIjoiaHR0cHM6Ly9hdXRoemVyby5jb20ifQ.Rag8ymY4KWBBBLsHdbPC-M95EgrrjC4HUS7hzHihDWU
 
 
 ### Get user by Id
@@ -22,5 +22,16 @@ Authorization: Bearer {{BearerToken}}
     "lastName" : "Smith",
     "bio": "I am a software developer",
     "avatarUrl": "https://example.com/avatar.jpg"
+}
+
+
+### Assign roles to user
+POST {{Host}}/{{UserId}}/roles
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{BearerToken}}
+
+{
+    "roles": ["760a2dfc-7114-47dd-d257-08dd297fd518", "327db532-0652-479b-d258-08dd297fd518"]
 }
 

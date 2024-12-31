@@ -16,12 +16,19 @@ public static class UserApi
     {
         var api = builder.MapGroup("api/v1/users");
 
-        // GET api/accounts/{id}
+        // GET api/v1/users/{id}
         // If the id is me, it will return the current user id
         // Otherwise, it will return the user id by the id provided
         api.MapGet("{id}", GetUserByIdAsync).RequireAuthorization();
 
+        // PATCH api/v1/users/{id}
+        // Update user by id
+        // If the id is me, it will update the current user id
         api.MapPatch("{id}", UpdateUserById).RequireAuthorization();
+
+        // POST api/v1/users/{id}/roles
+        // Assign roles to the user
+        api.MapPost("{id}/roles", AssignRoles).RequireAuthorization();
 
         return api;
     }
@@ -62,6 +69,21 @@ public static class UserApi
             LastName: userEditRequest.LastName);
 
         var result = await accountService.Mediator.Send(editUserCommand);
+
+        return ApiResponse<bool>.Success(result);
+    }
+
+    public static async Task<ApiResponse<bool>> AssignRoles(
+        Guid id,
+        [FromBody] AssignRolesRequest assignRolesRequest, 
+        [AsParameters] AccountService accountService
+    )
+    {
+        AssignRoleCommand assignRoleCommand = new AssignRoleCommand(
+            UserId: id, 
+            Roles: assignRolesRequest.Roles);
+
+        var result = await accountService.Mediator.Send(assignRoleCommand);
 
         return ApiResponse<bool>.Success(result);
     }

@@ -30,4 +30,12 @@ public interface IRoleRepository : IRepository
     /// <returns>Returns the role.</returns>
     Task<Role?> GetByIdAsync(Guid id);
 
+
+    /// <summary>
+    /// Gets the roles by ids.
+    /// </summary>
+    /// <param name="ids">The role identifiers.</param>
+    /// <returns>Returns the roles.</returns>
+    Task<IEnumerable<Role>> GetRolesByIdsAsync(IEnumerable<Guid> ids);
+
 }

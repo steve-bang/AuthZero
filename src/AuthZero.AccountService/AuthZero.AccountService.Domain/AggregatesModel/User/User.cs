@@ -154,6 +154,14 @@ public class User : AggregateRoot
         }
     }
 
+    public void AssignRole(IEnumerable<Role> roles)
+    {
+        foreach (var role in roles)
+        {
+            AssignRole(role);
+        }
+    }
+
     public void RevokeRole(Role role)
     {
         _roles.Remove(role);
