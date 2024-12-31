@@ -3,6 +3,7 @@ using System.Security.Claims;
 using AuthZero.AccountService.Application.Features.Commands;
 using AuthZero.AccountService.Application.Features.Queries;
 using AuthZero.AccountService.Application.Models;
+using AuthZero.AccountService.Domain.AggregatesModel;
 using AuthZero.AccountService.Domain.AggregatesModel.User;
 using AuthZero.AccountService.WebApi.Models;
 using AuthZero.Shared.Models;
@@ -29,6 +30,14 @@ public static class UserApi
         // POST api/v1/users/{id}/roles
         // Assign roles to the user
         api.MapPost("{id}/roles", AssignRoles).RequireAuthorization();
+
+        // GET api/v1/users/{id}/roles
+        // Gets the roles of the user
+        api.MapGet("{id}/roles", GetRoles).RequireAuthorization();       
+
+        // DELETE api/v1/users/{id}/roles
+        // Revoke roles from the user
+        api.MapDelete("{id}/roles", RevokeRoles).RequireAuthorization();
 
         return api;
     }
@@ -61,7 +70,7 @@ public static class UserApi
         [AsParameters] AccountService accountService
     )
     {
-        EditUserCommand editUserCommand = new EditUserCommand(
+        EditUserCommand editUserCommand = new(
             Id: id, 
             AvatarUrl: userEditRequest.AvatarUrl, 
             Bio: userEditRequest.Bio,
@@ -79,7 +88,34 @@ public static class UserApi
         [AsParameters] AccountService accountService
     )
     {
-        AssignRoleCommand assignRoleCommand = new AssignRoleCommand(
+        AssignRoleCommand assignRoleCommand = new(
+            UserId: id, 
+            Roles: assignRolesRequest.Roles);
+
+        var result = await accountService.Mediator.Send(assignRoleCommand);
+
+        return ApiResponse<bool>.Success(result);
+    }
+
+    public static async Task<ApiResponse<RoleResponse[]>> GetRoles(
+        Guid id,
+        [AsParameters] AccountService accountService
+    )
+    {
+        GetRolesByUserQuery query = new(UserId: id);
+
+        var result = await accountService.Mediator.Send(query);
+
+        return ApiResponse<RoleResponse[]>.Success(result);
+    }
+
+    public static async Task<ApiResponse<bool>> RevokeRoles(
+        Guid id,
+        [FromBody] AssignRolesRequest assignRolesRequest, 
+        [AsParameters] AccountService accountService
+    )
+    {
+        RevokeRolesCommand assignRoleCommand = new(
             UserId: id, 
             Roles: assignRolesRequest.Roles);
 

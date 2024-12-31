@@ -154,7 +154,7 @@ public class User : AggregateRoot
         }
     }
 
-    public void AssignRole(IEnumerable<Role> roles)
+    public void AssignRoles(IEnumerable<Role> roles)
     {
         foreach (var role in roles)
         {
@@ -165,5 +165,13 @@ public class User : AggregateRoot
     public void RevokeRole(Role role)
     {
         _roles.Remove(role);
+    }
+
+    public void RevokeRoles(IEnumerable<Role> roles)
+    {
+        foreach (var role in roles)
+        {
+            RevokeRole(role);
+        }
     }
 }

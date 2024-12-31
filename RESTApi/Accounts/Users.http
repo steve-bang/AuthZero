@@ -35,3 +35,20 @@ Authorization: Bearer {{BearerToken}}
     "roles": ["760a2dfc-7114-47dd-d257-08dd297fd518", "327db532-0652-479b-d258-08dd297fd518"]
 }
 
+### Get user's roles
+GET {{Host}}/{{UserId}}/roles
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{BearerToken}}
+
+
+### Remove roles from user
+DELETE {{Host}}/{{UserId}}/roles
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{BearerToken}}
+
+{
+    "roles": ["760a2dfc-7114-47dd-d257-08dd297fd518"]
+}
+

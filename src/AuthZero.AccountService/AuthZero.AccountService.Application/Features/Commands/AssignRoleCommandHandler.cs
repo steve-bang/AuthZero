@@ -25,7 +25,7 @@ public record AssignRoleCommandHandler(
             throw new NotFoundDataException(nameof(Role), "Role.NotFound");
         }
 
-        user.AssignRole(roles);
+        user.AssignRoles(roles);
 
         _userRepository.Update(user);
 
