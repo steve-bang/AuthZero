@@ -32,6 +32,9 @@
               "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj": {
                 "projectPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj"
               },
+              "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost.Shared/AuthZero.AppHost.Shared.csproj": {
+                "projectPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost.Shared/AuthZero.AppHost.Shared.csproj"
+              },
               "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/AuthZero.Shared.csproj": {
                 "projectPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/AuthZero.Shared.csproj"
               }
@@ -55,6 +58,10 @@
           "targetAlias": "net9.0",
           "dependencies": {
             "Aspire.Confluent.Kafka": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Aspire.StackExchange.Redis.DistributedCaching": {
               "target": "Package",
               "version": "[9.0.0, )"
             }
@@ -207,6 +214,65 @@
               "version": "[9.0.0, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost.Shared/AuthZero.AppHost.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost.Shared/AuthZero.AppHost.Shared.csproj",
+        "projectName": "AuthZero.AppHost.Shared",
+        "projectPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost.Shared/AuthZero.AppHost.Shared.csproj",
+        "packagesPath": "/Users/mrsteve.bang/.nuget/packages/",
+        "outputPath": "/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mrsteve.bang/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
           "imports": [
             "net461",
             "net462",

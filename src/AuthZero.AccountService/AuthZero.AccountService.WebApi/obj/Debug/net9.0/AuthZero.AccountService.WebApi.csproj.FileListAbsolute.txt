@@ -348,3 +348,11 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/runtimes/win-x86/native/vcruntime140.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/runtimes/win-x86/native/zlib1.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/runtimes/win-x86/native/zstd.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/Aspire.StackExchange.Redis.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/Aspire.StackExchange.Redis.DistributedCaching.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/HealthChecks.Redis.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/Pipelines.Sockets.Unofficial.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/StackExchange.Redis.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/AuthZero.AppHost.Shared.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.WebApi/bin/Debug/net9.0/AuthZero.AppHost.Shared.pdb

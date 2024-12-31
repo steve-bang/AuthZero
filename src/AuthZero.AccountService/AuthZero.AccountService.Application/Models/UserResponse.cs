@@ -36,4 +36,8 @@ public class UserResponse
         FirstName = user.FirstName;
         LastName = user.LastName;
     }
+
+    public UserResponse()
+    {
+    }
 }

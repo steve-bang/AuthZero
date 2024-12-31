@@ -14,14 +14,15 @@ var kafka = builder.AddKafka(name: "kafka-messages", port: 9092)
     .WithLifetime(ContainerLifetime.Persistent);
 
 // Define the SQL Server connection string
-var sqlServerAccountService = builder
-    .AddSqlServer(
-        "sql"
-        //, port: int.Parse(portDatabase.Resource.Value)
-    )
-    .WithDataBindMount(source: "../../database")
-    .WithLifetime(ContainerLifetime.Persistent)
-    .AddDatabase("Account");
+var sqlServerAccountService = builder.AddSqlServer("sql")
+                                     .WithDataBindMount(source: "../../database")
+                                     .WithLifetime(ContainerLifetime.Persistent)
+                                     .AddDatabase("Account");
+
+var caching = builder.AddRedis("caching")
+                   .WithDataBindMount("../../redis")
+                   .WithRedisInsight() // Add RedisInsight to the Redis container
+                   .WithRedisCommander(); // Add RedisCommander to the Redis container
 
 // Add a database to the SQL Server is AuthZero.Account
 // This is a name connection with "Account" and it's used by the AuthZero.AccountService project.
@@ -30,9 +31,11 @@ var sqlServerAccountService = builder
 //     .WithReference(sqlServerAccountService);
 
 
+
 builder.AddProject<Projects.AuthZero_AccountService_WebApi>("AccountService-WebApi")
         .WithReference(sqlServerAccountService).WaitFor(sqlServerAccountService)
-        .WithReference(kafka);
+        .WithReference(kafka)
+        .WithReference(caching);
 
 builder.AddProject<Projects.NotificationService_WebApi>("NotificationService-WebApi")
     .WithReference(kafka);

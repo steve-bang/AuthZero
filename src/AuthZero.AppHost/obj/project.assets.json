@@ -177,6 +177,43 @@
           "buildMultiTargeting/Aspire.Hosting.Orchestration.osx-arm64.targets": {}
         }
       },
+      "Aspire.Hosting.Redis/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "AspNetCore.HealthChecks.Redis": "8.0.1",
+          "AspNetCore.HealthChecks.Uris": "8.0.1",
+          "Aspire.Hosting": "9.0.0",
+          "Google.Protobuf": "3.28.2",
+          "Grpc.AspNetCore": "2.66.0",
+          "Grpc.Net.ClientFactory": "2.66.0",
+          "Grpc.Tools": "2.67.0",
+          "Humanizer.Core": "2.14.1",
+          "JsonPatch.Net": "3.1.1",
+          "KubernetesClient": "15.0.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "8.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.11",
+          "Microsoft.Extensions.Hosting": "8.0.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.1",
+          "Microsoft.Extensions.Http": "8.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2",
+          "Microsoft.Extensions.Primitives": "8.0.0",
+          "Polly.Core": "8.4.2",
+          "StackExchange.Redis": "2.8.16"
+        },
+        "compile": {
+          "lib/net8.0/Aspire.Hosting.Redis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.Redis.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Aspire.Hosting.SqlServer/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -230,6 +267,23 @@
         },
         "runtime": {
           "lib/net6.0/HealthChecks.Kafka.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.Redis/8.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.0",
+          "StackExchange.Redis": "2.7.4"
+        },
+        "compile": {
+          "lib/net6.0/HealthChecks.Redis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/HealthChecks.Redis.dll": {
             "related": ".xml"
           }
         }
@@ -2057,6 +2111,22 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "5.0.1"
+        },
+        "compile": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Polly.Core/8.4.2": {
         "type": "package",
         "compile": {
@@ -2067,6 +2137,23 @@
         "runtime": {
           "lib/net8.0/Polly.Core.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "StackExchange.Redis/2.8.16": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "compile": {
+          "lib/net6.0/StackExchange.Redis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/StackExchange.Redis.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2314,7 +2401,7 @@
       "System.IO.Pipelines/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/net7.0/_._": {
+          "lib/net7.0/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
         },
@@ -2740,6 +2827,22 @@
         "tools/ext/dcpctrl"
       ]
     },
+    "Aspire.Hosting.Redis/9.0.0": {
+      "sha512": "2UqN1zPydvgUJspPDAOnMkHdr0ZaQ4JbK3Ch+NMaudWQqpIBWzkzmSAB9qGj5n57SYWqa1ycovQUeGNcYu/sxg==",
+      "type": "package",
+      "path": "aspire.hosting.redis/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "aspire.hosting.redis.9.0.0.nupkg.sha512",
+        "aspire.hosting.redis.nuspec",
+        "lib/net8.0/Aspire.Hosting.Redis.dll",
+        "lib/net8.0/Aspire.Hosting.Redis.xml"
+      ]
+    },
     "Aspire.Hosting.SqlServer/9.0.0": {
       "sha512": "ixuEP7Se59CQrRaDoxEu8mKmMbOtpe1rG2ImXPL5ih2eHsOqaWY6Ge9U5BEkugQWafN1TagbD5nvfYPgqJDbKA==",
       "type": "package",
@@ -2770,6 +2873,22 @@
         "lib/net6.0/HealthChecks.Kafka.xml",
         "lib/netstandard2.0/HealthChecks.Kafka.dll",
         "lib/netstandard2.0/HealthChecks.Kafka.xml"
+      ]
+    },
+    "AspNetCore.HealthChecks.Redis/8.0.1": {
+      "sha512": "45jqq4ydvmm7yKpTf0jEpUuYloe2vlytN9dasmqwmQyorpNbjdvWuyvSmjVZM5nBa5e5ryF5MU+F7bXv6Zp2vQ==",
+      "type": "package",
+      "path": "aspnetcore.healthchecks.redis/8.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetcore.healthchecks.redis.8.0.1.nupkg.sha512",
+        "aspnetcore.healthchecks.redis.nuspec",
+        "icon.png",
+        "lib/net6.0/HealthChecks.Redis.dll",
+        "lib/net6.0/HealthChecks.Redis.xml",
+        "lib/netstandard2.0/HealthChecks.Redis.dll",
+        "lib/netstandard2.0/HealthChecks.Redis.xml"
       ]
     },
     "AspNetCore.HealthChecks.SqlServer/8.0.2": {
@@ -5667,6 +5786,29 @@
         "readme.md"
       ]
     },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "sha512": "zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "type": "package",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Pipelines.Sockets.Unofficial.dll",
+        "lib/net461/Pipelines.Sockets.Unofficial.xml",
+        "lib/net472/Pipelines.Sockets.Unofficial.dll",
+        "lib/net472/Pipelines.Sockets.Unofficial.xml",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.xml",
+        "pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+        "pipelines.sockets.unofficial.nuspec"
+      ]
+    },
     "Polly.Core/8.4.2": {
       "sha512": "BpE2I6HBYYA5tF0Vn4eoQOGYTYIK1BlF5EXVgkWGn3mqUUjbXAr13J6fZVbp7Q3epRR8yshacBMlsHMhpOiV3g==",
       "type": "package",
@@ -5693,6 +5835,27 @@
         "package-readme.md",
         "polly.core.8.4.2.nupkg.sha512",
         "polly.core.nuspec"
+      ]
+    },
+    "StackExchange.Redis/2.8.16": {
+      "sha512": "WaoulkOqOC9jHepca3JZKFTqndCWab5uYS7qCzmiQDlrTkFaDN7eLSlEfHycBxipRnQY9ppZM7QSsWAwUEGblw==",
+      "type": "package",
+      "path": "stackexchange.redis/2.8.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/StackExchange.Redis.dll",
+        "lib/net461/StackExchange.Redis.xml",
+        "lib/net472/StackExchange.Redis.dll",
+        "lib/net472/StackExchange.Redis.xml",
+        "lib/net6.0/StackExchange.Redis.dll",
+        "lib/net6.0/StackExchange.Redis.xml",
+        "lib/netcoreapp3.1/StackExchange.Redis.dll",
+        "lib/netcoreapp3.1/StackExchange.Redis.xml",
+        "lib/netstandard2.0/StackExchange.Redis.dll",
+        "lib/netstandard2.0/StackExchange.Redis.xml",
+        "stackexchange.redis.2.8.16.nupkg.sha512",
+        "stackexchange.redis.nuspec"
       ]
     },
     "System.ClientModel/1.1.0": {
@@ -6477,6 +6640,7 @@
       "Aspire.Hosting.AppHost >= 9.0.0",
       "Aspire.Hosting.Kafka >= 9.0.0",
       "Aspire.Hosting.Orchestration.osx-arm64 >= 9.0.0",
+      "Aspire.Hosting.Redis >= 9.0.0",
       "Aspire.Hosting.SqlServer >= 9.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0"
@@ -6546,6 +6710,10 @@
             "target": "Package",
             "version": "[9.0.0, )",
             "autoReferenced": true
+          },
+          "Aspire.Hosting.Redis": {
+            "target": "Package",
+            "version": "[9.0.0, )"
           },
           "Aspire.Hosting.SqlServer": {
             "target": "Package",

@@ -18,7 +18,11 @@ public static class DependencyInjection
             //config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
         });
 
+        // Add the Kafka services
         builder.AddKafkaProducer<string, string>(Names.KafkaMessages);
+
+        // Add Redis services
+        builder.AddRedisDistributedCache("caching");
 
         return builder;
     }
