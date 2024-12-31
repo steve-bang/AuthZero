@@ -33,6 +33,7 @@ app.MapDefaultEndpoints();
 // Maps all API endpoints
 app.MapAuthApiV1();
 app.MapUserApi();
+app.MapRoleApiV1();
 
 app.UseDefaultOpenApi();
 

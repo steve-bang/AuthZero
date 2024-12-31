@@ -1,5 +1,6 @@
 
 
+using AuthZero.AccountService.Domain.AggregatesModel;
 using AuthZero.AccountService.Domain.AggregatesModel.User;
 using AuthZero.AccountService.Domain.Common;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -18,6 +19,8 @@ public class AccountServiceContext(
     ): DbContext(options), IUnitOfWork
 {
     public DbSet<User> Users { get; set; }
+
+    public DbSet<Role> Roles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

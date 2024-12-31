@@ -55,6 +55,7 @@ public static class Extensions
         
         // Add the repositories
         builder.Services.AddScoped<IUserRepository, UserRepository>();
+        builder.Services.AddScoped<IRoleRepository, RoleRepository>();
     }
 
 

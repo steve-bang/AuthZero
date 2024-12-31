@@ -10,6 +10,11 @@ namespace AuthZero.AccountService.Domain.AggregatesModel.User;
 public class User : AggregateRoot
 {
     /// <summary>
+    /// The roles of the user.
+    /// </summary>
+    private List<Role> _roles = new();
+
+    /// <summary>
     /// The email address of the user.
     /// </summary>
     public string EmailAddress { get; set; }
@@ -49,6 +54,8 @@ public class User : AggregateRoot
     /// Will be null if the user has never logged in.
     /// </summary>
     public DateTime? LastLogin { get; set; }
+
+    public IReadOnlyCollection<Role> Roles => _roles.AsReadOnly();
 
     public DateTime? LastUpdateAt { get; set; }
 
@@ -137,5 +144,18 @@ public class User : AggregateRoot
         FirstName = firstName;
         LastName = lastName;
         LastUpdateAt = DateTime.UtcNow;
+    }
+
+    public void AssignRole(Role role)
+    {
+        if ( !_roles.Any(r => r.Id == role.Id) )
+        {
+            _roles.Add(role);
+        }
+    }
+
+    public void RevokeRole(Role role)
+    {
+        _roles.Remove(role);
     }
 }
