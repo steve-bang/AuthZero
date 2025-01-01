@@ -32,15 +32,15 @@ var caching = builder.AddRedis("caching")
 
 
 
-builder.AddProject<Projects.AuthZero_AccountService_WebApi>("AccountService-WebApi")
+builder.AddProject<Projects.AuthZero_AccountService_WebApi>("account-api")
         .WithReference(sqlServerAccountService).WaitFor(sqlServerAccountService)
         .WithReference(kafka)
         .WithReference(caching);
 
-builder.AddProject<Projects.NotificationService_WebApi>("NotificationService-WebApi")
+builder.AddProject<Projects.NotificationService_WebApi>("notification-api")
     .WithReference(kafka);
 
 
-builder.AddProject<Projects.AuthZero_WebApp>("AuthZero-WebApp");
+builder.AddProject<Projects.AuthZero_WebApp>("webapp");
 
 await builder.Build().RunAsync();
