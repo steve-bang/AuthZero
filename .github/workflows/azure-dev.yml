@@ -39,7 +39,9 @@ jobs:
             --tenant-id "$Env:AZURE_TENANT_ID"
         shell: pwsh
 
-
+      - name: Cd project AppHost
+        run: cd src/AuthZero.AppHost
+      
       - name: Provision Infrastructure
         run: azd provision --no-prompt
         env:
