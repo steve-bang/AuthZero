@@ -38,9 +38,6 @@ jobs:
             --federated-credential-provider "github" `
             --tenant-id "$Env:AZURE_TENANT_ID"
         shell: pwsh
-
-      - name: Cd project AppHost
-        run: cd src
       
       - name: Provision Infrastructure
         run: azd provision
