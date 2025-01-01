@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../AuthZero.AppHost.Shared/AuthZero.AppHost.Shared.csproj" />
+    <ProjectReference Include="../../AuthZero.Shared/AuthZero.Shared.csproj" />
+    <ProjectReference Include="../AuthZero.AccountService.Domain/AuthZero.AccountService.Domain.csproj" />
+    <ProjectReference Include="../AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Confluent.Kafka" Version="9.0.0" />
+    <PackageReference Include="Aspire.StackExchange.Redis.DistributedCaching" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>

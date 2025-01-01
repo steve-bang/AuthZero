@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-MigrationService-2421f267-d5f5-4baf-9822-63550299ee3f</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../AuthZero.ServiceDefaults/AuthZero.ServiceDefaults.csproj" />
+    <ProjectReference Include="../AuthZero.AccountService.Domain/AuthZero.AccountService.Domain.csproj" />
+    <ProjectReference Include="../AuthZero.AccountService.Infrastructure/AuthZero.AccountService.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

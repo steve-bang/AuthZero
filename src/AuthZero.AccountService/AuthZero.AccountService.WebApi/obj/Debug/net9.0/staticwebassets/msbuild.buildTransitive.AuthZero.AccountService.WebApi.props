@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/AuthZero.AccountService.WebApi.props" />
+</Project>

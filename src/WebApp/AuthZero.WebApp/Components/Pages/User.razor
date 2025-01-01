@@ -1,0 +1,25 @@
+@page "/users/{id:guid}"
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+@inject NavigationManager Navigation
+
+<PageTitle>User</PageTitle>
+
+<div>Id: @id</div>
+
+<button class="btn btn-primary" @onclick="OnClickGotoCounter">Go to Counter</button>
+
+<h1 style="font-size:@Configuration["h1FontSize"]">
+    Configuration example
+</h1>
+
+@code {
+    [Parameter]
+    public Guid id { get; set; }
+
+    private void OnClickGotoCounter()
+    {
+        Navigation.NavigateTo("counter");
+    }
+}

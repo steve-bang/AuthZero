@@ -1,0 +1,13 @@
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/bin/Debug/net8.0/AuthZero.Shared.deps.json
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/bin/Debug/net8.0/AuthZero.Shared.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/bin/Debug/net8.0/AuthZero.Shared.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/AuthZero.Shared.csproj.AssemblyReference.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/AuthZero.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/AuthZero.Shared.AssemblyInfoInputs.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/AuthZero.Shared.AssemblyInfo.cs
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/AuthZero.Shared.csproj.CoreCompileInputs.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/AuthZero.Shared.sourcelink.json
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/AuthZero.Shared.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/refint/AuthZero.Shared.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/AuthZero.Shared.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.Shared/obj/Debug/net8.0/ref/AuthZero.Shared.dll

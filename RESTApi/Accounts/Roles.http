@@ -1,0 +1,14 @@
+@Host = https://localhost:7159/api/v1/roles
+@UserId = a9ad6829-10f7-404e-224f-08dd2274641d
+
+
+### Add new role
+POST {{Host}}
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name" : "Contributor",
+    "description" : "Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries."
+}
+

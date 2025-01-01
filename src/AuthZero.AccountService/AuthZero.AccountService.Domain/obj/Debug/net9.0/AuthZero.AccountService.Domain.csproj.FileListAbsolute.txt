@@ -1,0 +1,16 @@
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/bin/Debug/net9.0/AuthZero.AccountService.Domain.deps.json
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/bin/Debug/net9.0/AuthZero.AccountService.Domain.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/bin/Debug/net9.0/AuthZero.AccountService.Domain.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/bin/Debug/net9.0/AuthZero.Shared.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/bin/Debug/net9.0/AuthZero.Shared.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/AuthZero.AccountService.Domain.csproj.AssemblyReference.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/AuthZero.AccountService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/AuthZero.AccountService.Domain.AssemblyInfoInputs.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/AuthZero.AccountService.Domain.AssemblyInfo.cs
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/AuthZero.AccountService.Domain.csproj.CoreCompileInputs.cache
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/AuthZero.AccountService.Domain.sourcelink.json
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/AuthZero.9E2C2F75.Up2Date
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/AuthZero.AccountService.Domain.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/refint/AuthZero.AccountService.Domain.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/AuthZero.AccountService.Domain.pdb
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AccountService/AuthZero.AccountService.Domain/obj/Debug/net9.0/ref/AuthZero.AccountService.Domain.dll

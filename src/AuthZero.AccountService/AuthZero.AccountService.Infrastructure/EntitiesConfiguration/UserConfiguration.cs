@@ -1,4 +1,5 @@
 
+using AuthZero.AccountService.Domain.AggregatesModel;
 using AuthZero.AccountService.Domain.AggregatesModel.User;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -15,6 +16,28 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         // Auto-increment the ID
         builder.Property(x => x.Id).ValueGeneratedOnAdd();
+
+        builder.HasMany(u => u.Roles)
+                .WithMany(r => r.Users)
+                .UsingEntity<Dictionary<string, object>>(
+                "User_Roles", // Table name for the join table between users and roles
+                userRole => 
+                    userRole
+                    .HasOne<Role>()
+                    .WithMany()
+                    .HasForeignKey("Role_Id") // Foreign key for Role
+                    .OnDelete(DeleteBehavior.Cascade),
+                userRole => userRole
+                    .HasOne<User>()
+                    .WithMany()
+                    .HasForeignKey("User_Id") // Foreign key for User
+                    .OnDelete(DeleteBehavior.Cascade),
+                userRole =>
+                {
+                    userRole.HasKey("User_Id", "Role_Id");
+                    userRole.Property<DateTime>("Last_Update_At").HasDefaultValueSql("GETDATE()");
+                    userRole.Property<DateTime>("Created_Date").HasDefaultValueSql("GETDATE()");
+                });
 
         builder
             .Property(x => x.EmailAddress)
@@ -53,5 +76,14 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder
             .Property(x => x.Bio);
+
+        builder
+            .Property(x => x.LastUpdateAt)
+            .HasColumnName("Last_Update_At");
+
+        builder
+            .Property(x => x.CreatedAt)
+            .HasColumnName("Created_At")
+            .HasDefaultValue(DateTime.UtcNow);
     }
 }
