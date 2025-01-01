@@ -24,7 +24,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthZero.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb8a461bb4dbca091ea20d2b147a9a57ba96afa5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+becb67da71498c872384b48d81cf328d2f83a61b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthZero.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthZero.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
