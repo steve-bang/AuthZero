@@ -1,4 +1,4 @@
-@Host = https://localhost:7159/api/v1/auth
+@Host = https://account-api.internal.blackcliff-ca28c804.southeastasia.azurecontainerapps.io/api/v1/auth
 
 
 ### Register
