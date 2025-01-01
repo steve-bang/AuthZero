@@ -40,12 +40,7 @@ jobs:
         shell: pwsh
 
       - name: Cd project AppHost
-        run: cd src/AuthZero.AppHost
-
-      - name: Init
-        run: azd init
-        env:
-          AZD_INITIAL_ENVIRONMENT_CONFIG: ${{ secrets.AZD_INITIAL_ENVIRONMENT_CONFIG }}
+        run: cd src
       
       - name: Provision Infrastructure
         run: azd provision
