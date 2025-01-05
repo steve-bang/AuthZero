@@ -146,3 +146,4 @@
 2025-01-05 09:08:01.82 spid62      Attempting to load library 'xplog70.dll' into memory. This is an informational message only. No user action is required.
 2025-01-05 09:08:01.86 spid62      Using 'xplog70.dll' version '2022.160.4165' to execute extended stored procedure 'xp_msver'. This is an informational message only; no user action is required.
 2025-01-05 09:10:59.14 spid62      Using 'dbghelp.dll' version '4.0.5'
+2025-01-05 10:00:22.56 spid18s     [DevOpsSnapshotTelemetryTask] Evaluating the background task.

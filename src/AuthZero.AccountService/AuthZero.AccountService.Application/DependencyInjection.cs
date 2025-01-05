@@ -1,5 +1,7 @@
+using AuthZero.AccountService.Application.Behaviors;
 using AuthZero.AccountService.Application.Caching;
 using AuthZero.AppHost.Shared.Constants;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -16,8 +18,10 @@ public static class DependencyInjection
             config.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
 
             // Register the ValidationBehavior
-            //config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
+            config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
         });
+
+        builder.Services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
 
         // Add the Kafka services
         builder.AddKafkaProducer<string, string>(Names.KafkaMessages);
@@ -25,7 +29,7 @@ public static class DependencyInjection
         // Add Redis services
         builder.AddRedisDistributedCache("caching");
 
-
+        // Register service
         builder.Services.AddScoped<ISessionCaching, SessionCaching>();
 
         return builder;
