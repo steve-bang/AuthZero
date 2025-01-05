@@ -1,3 +1,4 @@
+using AuthZero.AccountService.Application.Caching;
 using AuthZero.AppHost.Shared.Constants;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,6 +24,9 @@ public static class DependencyInjection
 
         // Add Redis services
         builder.AddRedisDistributedCache("caching");
+
+
+        builder.Services.AddScoped<ISessionCaching, SessionCaching>();
 
         return builder;
     }

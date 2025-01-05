@@ -1,5 +1,5 @@
 
-using AuthZero.AccountService.Domain.AggregatesModel;
+
 using AuthZero.Shared.Exceptions;
 
 namespace AuthZero.AccountService.Application.Features.Commands;

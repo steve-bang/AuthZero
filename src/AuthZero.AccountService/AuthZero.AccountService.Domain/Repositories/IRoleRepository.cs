@@ -38,11 +38,5 @@ public interface IRoleRepository : IRepository
     /// <returns>Returns the roles.</returns>
     Task<IEnumerable<Role>> GetRolesByIdsAsync(IEnumerable<Guid> ids);
 
-    /// <summary>
-    /// Gets the roles by user id.
-    /// </summary>
-    /// <param name="userId">The user identifier.</param>
-    /// <returns>Returns the roles.</returns>
-    Task<List<Role>> GetRolesByUserIdAsync(Guid userId);
 
 }

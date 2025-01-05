@@ -1,11 +1,15 @@
 
+using AuthZero.AccountService.Application.Caching;
+using Microsoft.Extensions.Caching.Distributed;
+
 namespace AuthZero.AccountService.Application.Features.Commands;
 
 public class LoginUserCommandHandler
 (
     IUserRepository _userRepository,
     IPasswordHasher _passwordHasher,
-    IJwtProvider _jwtProvider
+    IJwtProvider _jwtProvider,
+    ISessionCaching _cache
 ) : IRequestHandler<LoginUserCommand, ResultUserLoginSuccess>
 {
     public async Task<ResultUserLoginSuccess> Handle(LoginUserCommand request, CancellationToken cancellationToken)
@@ -32,6 +36,8 @@ public class LoginUserCommandHandler
 
         // Generate the JWT token
         _jwtProvider.GenerateToken(user, out string accessToken, out string refreshToken, out DateTime accessTokenExpiry);
+
+        _ = _cache.SetAccessTokenAsync(accessToken, accessTokenExpiry);
 
         // Return the success result
         return new ResultUserLoginSuccess(

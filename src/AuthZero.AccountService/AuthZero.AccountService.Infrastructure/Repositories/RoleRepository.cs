@@ -42,11 +42,4 @@ public class RoleRepository : IRoleRepository
         return await _dbContext.Roles.Where(r => ids.Contains(r.Id)).ToListAsync();
     }
 
-    /// <inheritdoc/>
-    public async Task<List<Role>> GetRolesByUserIdAsync(Guid userId)
-    {
-        return await _dbContext.Roles
-            .Where(r => r.Users.Any(u => u.Id == userId))
-            .ToListAsync();
-    }
 }

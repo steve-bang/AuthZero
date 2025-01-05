@@ -5,7 +5,7 @@ public class UserResponse
 {
     public Guid Id { get; set; }
 
-    public string EmailAddress { get; set; }
+    public string EmailAddress { get; set; } = null!;
 
     public string? AvatarUrl { get; set; }
 
