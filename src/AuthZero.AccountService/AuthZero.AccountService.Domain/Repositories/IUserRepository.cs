@@ -31,6 +31,13 @@ public interface IUserRepository : IRepository
     Task<User?> GetByEmailAsync(string email);
 
     /// <summary>
+    /// Checks if the email user exists.
+    /// </summary>
+    /// <param name="email">The email.</param>
+    /// <returns></returns>
+    Task<bool> ExistsEmailAsync(string email);
+
+    /// <summary>
     /// Gets the user by id.
     /// </summary>
     /// <param name="id">The identifier.</param>

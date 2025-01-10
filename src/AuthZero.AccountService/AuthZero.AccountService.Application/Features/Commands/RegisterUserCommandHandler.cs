@@ -11,6 +11,11 @@ public class RegisterUserCommandHanlder(
 {
     public async Task<Guid> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
+
+        bool existsEmail = await _userRepository.ExistsEmailAsync(request.EmailAddress);
+
+        if(existsEmail) throw UserError.EmailAlreadyExists;
+
         // Hash the password
         string passwordHash = _passwordHasher.Hash(request.Password, out string salt);
 

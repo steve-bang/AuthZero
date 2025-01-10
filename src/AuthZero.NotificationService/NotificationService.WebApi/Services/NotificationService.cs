@@ -13,23 +13,31 @@ namespace AuthZero.NotificationService.WebApi.Services
 
             while (!stoppingToken.IsCancellationRequested)
             {
-                var consumeResult = consumer.Consume(stoppingToken);
-                if (consumeResult != null)
+                try
                 {
-                    // Process the message
-                    Console.WriteLine($"Consumed message '{consumeResult.Message.Value}' at: '{consumeResult.TopicPartitionOffset}'.");
+                    var consumeResult = consumer.Consume(stoppingToken);
 
-                    // Commit the message
-                    consumer.Commit(consumeResult);
+                    if (consumeResult != null)
+                    {
+                        // Process the message
+                        Console.WriteLine($"Consumed message '{consumeResult.Message.Value}' at: '{consumeResult.TopicPartitionOffset}'.");
 
-                    // Do something with the message
-                    // For example, send a notification
+                        // Commit the message
+                        consumer.Commit(consumeResult);
 
+                        // Do something with the message
+                        // For example, send a notification
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("No message consumed");
+                        await Task.Delay(1000, stoppingToken);
+                    }
                 }
-                else 
+                catch (ConsumeException ex)
                 {
-                    Console.WriteLine("No message consumed");
-                    await Task.Delay(1000, stoppingToken);
+                    Console.WriteLine("Error when trying to consume result. {0}", ex.Message);
                 }
             }
         }
