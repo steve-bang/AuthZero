@@ -51,4 +51,6 @@ var webapp = builder
 //     .WithReference(webapp)
 //     .WithExternalHttpEndpoints();
 
+
+builder.AddProject<Projects.WebApi>("auditservice-api");
 await builder.Build().RunAsync();

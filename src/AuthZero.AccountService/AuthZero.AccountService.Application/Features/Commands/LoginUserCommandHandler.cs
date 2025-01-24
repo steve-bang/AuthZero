@@ -19,11 +19,11 @@ public class LoginUserCommandHandler
 
         // If the user is not found, return a failure result
         if (user is null) 
-            return new ResultUserLoginSuccess();
+            throw UserError.AuthenticationFailed;
 
         // Verify the password
         if (!_passwordHasher.Verify(request.Password, user.PasswordHash, user.Salt))
-            return new ResultUserLoginSuccess();
+            throw UserError.AuthenticationFailed;
 
         // Update the last login date
         user.Login();

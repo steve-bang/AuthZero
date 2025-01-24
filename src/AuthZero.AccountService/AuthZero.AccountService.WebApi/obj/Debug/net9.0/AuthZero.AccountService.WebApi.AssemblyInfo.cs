@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthZero.AccountService.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc3758ea3bdb0c59718a107550f52141ae269836")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+563a2608a755d2eed8a694c36bb00b1be0d71f1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthZero.AccountService.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthZero.AccountService.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

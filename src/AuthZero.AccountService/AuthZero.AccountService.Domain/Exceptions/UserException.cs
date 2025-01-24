@@ -1,4 +1,5 @@
 
+using AuthZero.AccountService.Domain.AggregatesModel.User;
 using AuthZero.Shared.Exceptions;
 
 namespace AuthZero.AccountService.Domain.Exception;
@@ -9,7 +10,17 @@ public static class UserError
     private static readonly BadRequestException _emailAlreadyExists =
         new(Codes.EmailAlreadyExists, Messages.EmailAlreadyExists);
 
+    private static readonly BadRequestException _authenticationFailed =
+        new(Codes.AuthenticationFailed, Messages.AuthenticationFailed);
+
+    private static readonly NotFoundDataException _userNotFound =
+        new(nameof(User), Codes.NotFound);
+
     public static BadRequestException EmailAlreadyExists => _emailAlreadyExists;
+
+    public static BadRequestException AuthenticationFailed => _authenticationFailed;
+
+    public static NotFoundDataException UserNotFound => _userNotFound;
 
     public static class Codes
     {
@@ -28,6 +39,10 @@ public static class UserError
         public const string PasswordMismatch = "User.Password.PasswordMismatch";
 
         public const string PasswordInvalid = "User.Password.Invalid";
+
+        public const string AuthenticationFailed = "Auth.Failed";
+
+        public const string NotFound = "User.NotFound";
     }
 
     public static class Messages
@@ -38,5 +53,6 @@ public static class UserError
         public const string PasswordRequired = "The password is must be not empty.";
         public const string PasswordMismatch = "The password and confirm password must be matched.";
         public const string PasswordInvalid = "Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, and one digit.";
+        public const string AuthenticationFailed = "Authentication failed.";
     }
 }

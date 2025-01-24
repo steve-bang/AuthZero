@@ -1,5 +1,4 @@
 
-using AuthZero.Shared.Exceptions;
 
 namespace AuthZero.AccountService.Application.Features.Commands;
 
@@ -12,7 +11,7 @@ public class EditUserCommandHandler(
         User? user = await _userRepository.GetByIdAsync(request.Id);
 
         if(user is null)
-            throw new NotFoundDataException("User", "User.NotFound");
+            throw UserError.UserNotFound;
 
         user.Edit(
             avatarUrl: request.AvatarUrl,

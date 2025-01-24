@@ -1,7 +1,4 @@
 
-
-using AuthZero.Shared.Exceptions;
-
 namespace AuthZero.AccountService.Application.Features.Commands;
 
 public record GetRolesByUserQueryHandler(
@@ -12,10 +9,9 @@ public record GetRolesByUserQueryHandler(
     public async Task<RoleResponse[]> Handle(GetRolesByUserQuery request, CancellationToken cancellationToken)
     {
         var user = await _userRepository.GetByIdAsync(request.UserId);
-        if (user == null)
-        {
-            throw new NotFoundDataException(nameof(User), "User.NotFound");
-        }
+
+        if (user is null)
+            throw UserError.UserNotFound;
         
         return user.Roles.Select(r => new RoleResponse(
             r.Id,

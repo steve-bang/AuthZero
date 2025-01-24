@@ -2,7 +2,6 @@
 using AuthZero.Shared.Exceptions;
 using AuthZero.Shared.Models;
 using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 
 namespace AuthZero.AccountService.WebApi.Extensions;
 

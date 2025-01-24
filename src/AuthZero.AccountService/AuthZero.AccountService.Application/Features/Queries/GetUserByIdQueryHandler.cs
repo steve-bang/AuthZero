@@ -1,5 +1,5 @@
 
-using AuthZero.Shared.Exceptions;
+
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 
@@ -17,16 +17,11 @@ public class GetUserByIdQueryHandler(
 
         if(userCaching is not null)
         {
-            return JsonConvert.DeserializeObject<UserResponse>(userCaching) ?? throw new NotFoundDataException("User", "User.NotFound");
+            return JsonConvert.DeserializeObject<UserResponse>(userCaching) ?? throw UserError.UserNotFound;;
         }
 
-        var user = await _userRepository.GetByIdAsync(request.Id);
-
-        if (user is null)
-        {
-            throw new NotFoundDataException(nameof(User), "User.NotFound");
-        }
-
+        var user = await _userRepository.GetByIdAsync(request.Id) ?? throw UserError.UserNotFound;
+        
         await _cache.SetStringAsync($"user.{request.Id}", JsonConvert.SerializeObject(new UserResponse(user)));
 
         return new UserResponse(user);
