@@ -207,3 +207,4 @@
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/bin/Debug/net9.0/HealthChecks.Redis.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/bin/Debug/net9.0/Pipelines.Sockets.Unofficial.dll
 /Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/bin/Debug/net9.0/StackExchange.Redis.dll
+/Users/mrsteve.bang/Documents/_projects/authzero/src/AuthZero.AppHost/obj/Debug/net9.0/Aspire/references/WebApi.ProjectMetadata.g.cs

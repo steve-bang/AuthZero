@@ -18,7 +18,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
         builder.HasMany(u => u.Roles)
-                .WithMany(r => r.Users)
+                .WithMany("Users")
                 .UsingEntity<Dictionary<string, object>>(
                 "User_Roles", // Table name for the join table between users and roles
                 userRole => 

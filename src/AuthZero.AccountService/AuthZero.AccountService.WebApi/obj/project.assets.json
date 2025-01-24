@@ -4086,7 +4086,9 @@
           "AuthZero.AccountService.Domain": "1.0.0",
           "AuthZero.AccountService.Infrastructure": "1.0.0",
           "AuthZero.AppHost.Shared": "1.0.0",
-          "AuthZero.Shared": "1.0.0"
+          "AuthZero.Shared": "1.0.0",
+          "FluentValidation": "11.10.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.10.0"
         },
         "compile": {
           "bin/placeholder/AuthZero.AccountService.Application.dll": {}

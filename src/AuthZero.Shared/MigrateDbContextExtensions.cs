@@ -13,7 +13,7 @@ public static class MigrateDbContextExtensions
     private static readonly ActivitySource ActivitySource = new(ActivitySourceName);
 
     public static IServiceCollection AddMigration<TContext>(this IServiceCollection services)
-        where TContext : DbContext
+        where TContext : DbContext  
         => services.AddMigration<TContext>((_, _) => Task.CompletedTask);
 
     public static IServiceCollection AddMigration<TContext>(this IServiceCollection services, Func<TContext, IServiceProvider, Task> seeder)

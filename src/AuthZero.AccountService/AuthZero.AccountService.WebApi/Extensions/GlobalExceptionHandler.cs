@@ -1,7 +1,7 @@
 
 using AuthZero.Shared.Exceptions;
+using AuthZero.Shared.Models;
 using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 
 namespace AuthZero.AccountService.WebApi.Extensions;
 
@@ -26,37 +26,32 @@ internal sealed class GlobalExceptionHandler : IExceptionHandler
 
         if (exceptionHandler != null)
         {
-            // Create a ProblemDetails object to return as the response
-            var problemDetails1 = new ProblemDetails
-            {
-                Title = exceptionHandler.ErrorCode,
-                Status = (int)exceptionHandler.HttpCode,
-                Detail = exceptionHandler.Message
-            };
 
             // Set the response status code to the exception's status code
             httpContext.Response.StatusCode = (int)exceptionHandler.HttpCode;
 
             // Await the WriteAsJsonAsync method to ensure the response is written before the method returns
-            await httpContext.Response.WriteAsJsonAsync(problemDetails1, cancellationToken);
+            await httpContext.Response.WriteAsJsonAsync(
+                ApiErrorResponse.Create(
+                    httpCode: exceptionHandler.HttpCode,
+                    code: exceptionHandler.ErrorCode,
+                    message: exceptionHandler.Message),
+                cancellationToken);
 
             return true;
         }
         else
         {
-            // Create a ProblemDetails object to return as the response
-            var problemDetails = new ProblemDetails
-            {
-                Title = "An error occurred",
-                Status = StatusCodes.Status500InternalServerError,
-                Detail = exception.Message
-            };
-
             // Set the response status code to 500
             httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
 
             // Await the WriteAsJsonAsync method to ensure the response is written before the method returns
-            await httpContext.Response.WriteAsJsonAsync(problemDetails, cancellationToken);
+            await httpContext.Response.WriteAsJsonAsync(
+                ApiErrorResponse.Create(
+                    httpCode: StatusCodes.Status500InternalServerError,
+                    code: "Server.InternalServerError",
+                    message: exception.Message),
+                cancellationToken);
 
             return true;
         }

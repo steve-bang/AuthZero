@@ -7,9 +7,9 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "emailAddress" : "mrsang004@example.com",
-    "password" : "password",
-    "confirmPassword" : "password"
+    "emailAddress" : "mrsang005@example.com",
+    "password" : "StrongPass123",
+    "passwordConfirmation" : "StrongPass123"
 }
 
 ### Login user
@@ -19,6 +19,6 @@ Content-Type: application/json
 
 {
     "emailAddress" : "mrsteve@example.com",
-    "password" : "password"
+    "password" : "password123"
 }
 

@@ -46,5 +46,13 @@ public class UserRepository : IUserRepository
                 .Update(user)
                 .Entity;
     }
-    
+
+    public async Task<bool> ExistsEmailAsync(string email)
+    {
+        return (await _dbContext
+            .Users
+            .Where(x => x.EmailAddress == email)
+            .Select(u => u.EmailAddress)
+            .FirstOrDefaultAsync()) != null;
+    }
 }

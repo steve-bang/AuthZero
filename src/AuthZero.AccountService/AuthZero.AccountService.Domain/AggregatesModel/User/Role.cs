@@ -11,8 +11,6 @@ public class Role : AggregateRoot
 
     public string Description { get; set; }
 
-    public List<User.User> Users { get; set; } = new();
-
     public Role(string name, string description)
     {
         Name = name;
